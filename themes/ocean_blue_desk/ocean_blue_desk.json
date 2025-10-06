@@ -1,0 +1,21 @@
+{
+ "button_gradients": 1,
+ "button_rounded_corners": 1,
+ "button_shadows": 1,
+ "creation": "2025-10-06 12:00:00.000000",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "Website Theme",
+ "font_properties": "wght@300;400;500;600;700;800",
+ "idx": 0,
+ "ignored_apps": [],
+ "modified": "2025-10-06 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Website",
+ "name": "Ocean Blue Desk",
+ "owner": "Administrator",
+ "theme": "Ocean Blue Desk",
+ "theme_scss": "",
+ "css_content": "/* Ocean Blue Theme for Frappe Desk */\n\n/* Main layout colors */\n.layout-main {\n  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;\n  color: #2c3e50 !important;\n}\n\n/* Sidebar */\n.layout-side-section {\n  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%) !important;\n  border-right: 1px solid #2980b9 !important;\n  color: white !important;\n}\n\n.layout-side-section .standard-sidebar-item {\n  color: white !important;\n}\n\n.layout-side-section .standard-sidebar-item:hover {\n  background-color: rgba(255, 255, 255, 0.1) !important;\n  border-radius: 5px !important;\n}\n\n/* Navbar */\n.navbar {\n  background: linear-gradient(90deg, #3498db 0%, #2980b9 100%) !important;\n  border-bottom: none !important;\n  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3) !important;\n}\n\n.navbar .navbar-brand,\n.navbar .nav-link {\n  color: white !important;\n  font-weight: 500 !important;\n}\n\n.navbar .nav-link:hover {\n  color: #ecf0f1 !important;\n  transform: translateY(-1px) !important;\n  transition: all 0.3s ease !important;\n}\n\n/* Buttons */\n.btn-primary {\n  background: linear-gradient(45deg, #3498db, #2980b9) !important;\n  border: none !important;\n  border-radius: 25px !important;\n  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4) !important;\n  transition: all 0.3s ease !important;\n}\n\n.btn-primary:hover {\n  transform: translateY(-2px) !important;\n  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6) !important;\n}\n\n.btn-secondary {\n  background: linear-gradient(45deg, #ecf0f1, #bdc3c7) !important;\n  border: 1px solid #95a5a6 !important;\n  color: #2c3e50 !important;\n  border-radius: 25px !important;\n}\n\n/* Form controls */\n.form-control {\n  background-color: white !important;\n  border: 2px solid #ecf0f1 !important;\n  border-radius: 10px !important;\n  color: #2c3e50 !important;\n  transition: all 0.3s ease !important;\n}\n\n.form-control:focus {\n  border-color: #3498db !important;\n  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25) !important;\n  transform: scale(1.02) !important;\n}\n\n/* Cards and widgets */\n.widget,\n.card {\n  background: white !important;\n  border: none !important;\n  border-radius: 15px !important;\n  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;\n  transition: all 0.3s ease !important;\n}\n\n.widget:hover,\n.card:hover {\n  transform: translateY(-5px) !important;\n  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;\n}\n\n/* List items */\n.list-item {\n  background-color: white !important;\n  border-bottom: 1px solid #ecf0f1 !important;\n  border-radius: 8px !important;\n  margin: 2px 0 !important;\n  transition: all 0.3s ease !important;\n}\n\n.list-item:hover {\n  background: linear-gradient(90deg, #f8f9fa, #e9ecef) !important;\n  transform: translateX(5px) !important;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;\n}\n\n/* Module icons */\n.module-icon {\n  background: linear-gradient(45deg, #3498db, #2980b9) !important;\n  color: white !important;\n  border-radius: 15px !important;\n  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3) !important;\n}\n\n/* Dropdown menus */\n.dropdown-menu {\n  background-color: white !important;\n  border: none !important;\n  border-radius: 10px !important;\n  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;\n}\n\n.dropdown-item {\n  color: #2c3e50 !important;\n  border-radius: 5px !important;\n  margin: 2px 5px !important;\n  transition: all 0.3s ease !important;\n}\n\n.dropdown-item:hover {\n  background: linear-gradient(90deg, #3498db, #2980b9) !important;\n  color: white !important;\n  transform: translateX(5px) !important;\n}",
+ "theme_url": ""
+}

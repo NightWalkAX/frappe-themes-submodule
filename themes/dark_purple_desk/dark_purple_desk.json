@@ -1,0 +1,21 @@
+{
+ "button_gradients": 0,
+ "button_rounded_corners": 1,
+ "button_shadows": 0,
+ "creation": "2025-10-06 12:00:00.000000",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "Website Theme",
+ "font_properties": "wght@300;400;500;600;700;800",
+ "idx": 0,
+ "ignored_apps": [],
+ "modified": "2025-10-06 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Website",
+ "name": "Dark Purple Desk",
+ "owner": "Administrator",
+ "theme": "Dark Purple Desk",
+ "theme_scss": "",
+ "css_content": "/* Dark Purple Theme for Frappe Desk */\n\n/* Main layout colors */\n.layout-main {\n  background-color: #1a1a2e !important;\n  color: #e6e6fa !important;\n}\n\n/* Sidebar */\n.layout-side-section {\n  background-color: #16213e !important;\n  border-right: 1px solid #0f3460 !important;\n}\n\n/* Navbar */\n.navbar {\n  background-color: #0f3460 !important;\n  border-bottom: 1px solid #533483 !important;\n}\n\n.navbar .navbar-brand,\n.navbar .nav-link {\n  color: #e6e6fa !important;\n}\n\n.navbar .nav-link:hover {\n  color: #b19cd9 !important;\n}\n\n/* Buttons */\n.btn-primary {\n  background-color: #533483 !important;\n  border-color: #533483 !important;\n}\n\n.btn-primary:hover {\n  background-color: #6a4c93 !important;\n  border-color: #6a4c93 !important;\n}\n\n.btn-secondary {\n  background-color: #16213e !important;\n  border-color: #0f3460 !important;\n  color: #e6e6fa !important;\n}\n\n/* Form controls */\n.form-control {\n  background-color: #16213e !important;\n  border-color: #0f3460 !important;\n  color: #e6e6fa !important;\n}\n\n.form-control:focus {\n  border-color: #533483 !important;\n  box-shadow: 0 0 0 0.2rem rgba(83, 52, 131, 0.25) !important;\n}\n\n/* Cards and widgets */\n.widget,\n.card {\n  background-color: #16213e !important;\n  border-color: #0f3460 !important;\n  color: #e6e6fa !important;\n}\n\n/* List items */\n.list-item {\n  background-color: #16213e !important;\n  border-bottom: 1px solid #0f3460 !important;\n}\n\n.list-item:hover {\n  background-color: #1a1a2e !important;\n}\n\n/* Module icons */\n.module-icon {\n  background-color: #533483 !important;\n  color: white !important;\n}\n\n/* Dropdown menus */\n.dropdown-menu {\n  background-color: #16213e !important;\n  border-color: #0f3460 !important;\n}\n\n.dropdown-item {\n  color: #e6e6fa !important;\n}\n\n.dropdown-item:hover {\n  background-color: #1a1a2e !important;\n  color: #b19cd9 !important;\n}",
+ "theme_url": ""
+}
