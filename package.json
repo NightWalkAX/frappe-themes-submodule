@@ -1,0 +1,37 @@
+{
+  "name": "frappe-themes-submodule",
+  "version": "1.0.0",
+  "description": "Sub-repositorio independiente de temas para aplicaciones Frappe",
+  "main": "install.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightWalkAX/frappe-themes-submodule.git"
+  },
+  "keywords": [
+    "frappe",
+    "themes",
+    "website",
+    "submodule",
+    "bootstrap"
+  ],
+  "author": "Jose Yoel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NightWalkAX/frappe-themes-submodule/issues"
+  },
+  "homepage": "https://github.com/NightWalkAX/frappe-themes-submodule#readme",
+  "scripts": {
+    "install": "./install.sh",
+    "list-apps": "./utils/manage.sh list",
+    "check-themes": "./utils/manage.sh check",
+    "uninstall": "./utils/manage.sh uninstall"
+  },
+  "requirements": {
+    "frappe": ">=13.0.0",
+    "bash": ">=4.0"
+  },
+  "themes": [
+    "dickface",
+    "dickhead"
+  ]
+}

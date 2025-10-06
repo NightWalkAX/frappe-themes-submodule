@@ -1,0 +1,20 @@
+{
+ "button_gradients": 0,
+ "button_rounded_corners": 1,
+ "button_shadows": 0,
+ "creation": "2025-10-03 09:54:19.447663",
+ "custom": 0,
+ "docstatus": 0,
+ "doctype": "Website Theme",
+ "font_properties": "wght@300;400;500;600;700;800",
+ "idx": 0,
+ "ignored_apps": [],
+ "modified": "2025-10-03 09:54:19.447663",
+ "modified_by": "Administrator",
+ "module": "Business Theme V14",
+ "name": "Dickhead",
+ "owner": "Administrator",
+ "theme": "Dickhead",
+ "theme_scss": "$enable-shadows: false;\n$enable-gradients: false;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n\n\n\n// Custom Theme\n\n\n:root {\n\t}\n",
+ "theme_url": "/files/website_theme/dickhead_style.css"
+}
