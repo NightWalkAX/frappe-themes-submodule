@@ -1,24 +1,24 @@
 # Frappe Themes Submodule
 
-Un sub-repositorio independiente que contiene temas tanto para Website como para Frappe Desk. Incluye sistema completo de gestión de temas con previews, auto-cargador y theme switcher mejorado.
+An independent sub-repository containing themes for both Website and Frappe Desk. Includes a complete theme management system with previews, auto-loader, and enhanced theme switcher.
 
-## 🚀 Características
+## 🚀 Features
 
-- ✨ **Temas Website**: Temas "Dickface" y "Dickhead" con estilos Bootstrap personalizados
-- 🎨 **Temas Desk**: "Dark Purple Desk" y "Ocean Blue Desk" para interfaz de escritorio
-- 🔧 **Instalación Automática**: Script que instala todo el sistema de temas
-- 🎯 **Theme Switcher Mejorado**: Cambio instantáneo con previews visuales (Ctrl+Shift+G)
-- 🤖 **Auto-Cargador**: Persistencia automática de temas entre sesiones
-- 📊 **Theme Preview API**: Extracción automática de colores y variables CSS
-- 📦 **Sin Dependencias**: No requiere instalaciones adicionales
-- �️ **Plug & Play**: Funciona desde cualquier directorio frappe-bench
-- 📱 **Responsive**: Diseños adaptables y modernos
+- ✨ **Website Themes**: Custom Bootstrap themes with unique styling
+- 🎨 **Desk Themes**: "Dark Purple Desk" and "Ocean Blue Desk" for desktop interface
+- 🔧 **Automatic Installation**: Installation script that sets up the entire theme system
+- 🎯 **Enhanced Theme Switcher**: Instant switching with visual previews (Ctrl+Shift+G)
+- 🤖 **Auto-Loader**: Automatic theme persistence between sessions
+- 📊 **Theme Preview API**: Automatic extraction of colors and CSS variables
+- 📦 **Zero Dependencies**: No additional installations required
+- 🛠️ **Plug & Play**: Works from any frappe-bench directory
+- 📱 **Responsive**: Adaptive and modern designs
 
-## 📁 Estructura del Repositorio
+## 📁 Repository Structure
 
 ```
 frappe-themes-submodule/
-├── themes/                              # Temas disponibles
+├── themes/                              # Available themes
 │   ├── dickface/                        # Website theme
 │   │   ├── dickface.json               
 │   │   └── __init__.py
@@ -31,459 +31,457 @@ frappe-themes-submodule/
 │   └── ocean_blue_desk/                 # Desk theme
 │       ├── ocean_blue_desk.json        
 │       └── __init__.py
-├── utils/                               # Utilidades del sistema
-│   ├── theme_switcher_enhanced.js       # Theme switcher mejorado
-│   ├── desk.js                          # Auto-cargador integrado
-│   ├── theme_preview_api.py             # API de previews de temas
-│   └── user_extension.py                # Gestión de preferencias
+├── utils/                               # System utilities
+│   ├── theme_switcher_enhanced.js       # Enhanced theme switcher
+│   ├── desk.js                          # Integrated auto-loader
+│   ├── theme_preview_api.py             # Theme preview API
+│   └── user_extension.py                # User preference management
 ├── fixtures/
-│   └── website_theme.json               # Fixtures para instalación automática
-├── install.sh                           # Script de instalación principal
-├── THEME_PREVIEW_API.md                 # Documentación de la API
-└── README.md                            # Este archivo
+│   └── website_theme.json               # Fixtures for automatic installation
+├── install.sh                           # Main installation script
+├── THEME_PREVIEW_API.md                 # API documentation
+└── README.md                            # This file
 ```
 
-## 🛠️ Instalación
+## 🛠️ Installation
 
-### Opción 1: Como Submódulo Git (Recomendado)
+### Option 1: As Git Submodule (Recommended)
 
 ```bash
-# 1. Agregar como submódulo en tu proyecto
+# 1. Add as submodule to your project
 cd /path/to/frappe-bench
-git submodule add [URL_DE_ESTE_REPO] frappe-themes-submodule
+git submodule add [URL_OF_THIS_REPO] frappe-themes-submodule
 
-# 2. Instalar sistema completo de temas
-./frappe-themes-submodule/install.sh mi_app
+# 2. Install complete theme system
+./frappe-themes-submodule/install.sh my_app
 
-# 3. Migrar para aplicar cambios
-bench --site mi-sitio migrate
+# 3. Migrate to apply changes
+bench --site my-site migrate
 
-# 4. Construir assets de Frappe
+# 4. Build Frappe assets
 bench build --app frappe
 
-# 5. Limpiar cache para aplicar tema switcher
-bench --site mi-sitio clear-cache
+# 5. Clear cache to apply theme switcher
+bench --site my-site clear-cache
 
-# 6. ¡Usar Ctrl+Shift+G para cambiar temas instantly!
+# 6. Use Ctrl+Shift+G to switch themes instantly!
 ```
 
-### Opción 2: Descarga Directa
+### Option 2: Direct Download
 
 ```bash
-# 1. Descargar o clonar en frappe-bench
+# 1. Download or clone to frappe-bench
 cd /path/to/frappe-bench
-git clone [URL_DE_ESTE_REPO] themes-submodule
+git clone [URL_OF_THIS_REPO] themes-submodule
 
-# 2. Ejecutar instalación
-./themes-submodule/install.sh mi_app
+# 2. Run installation
+./themes-submodule/install.sh my_app
 
-# 3. Migrar
-bench --site mi-sitio migrate
+# 3. Migrate
+bench --site my-site migrate
 ```
 
-### Opción 3: Descarga Manual
+### Option 3: Manual Download
 
 ```bash
-# 1. Descargar y extraer en frappe-bench
+# 1. Download and extract to frappe-bench
 cd /path/to/frappe-bench
-wget [URL_DEL_ZIP]
+wget [ZIP_URL]
 unzip frappe-themes-submodule.zip
 
-# 2. Instalar
-./frappe-themes-submodule/install.sh mi_app
+# 2. Install
+./frappe-themes-submodule/install.sh my_app
 ```
 
-## 🔧 Uso del Script de Instalación
+## 🔧 Installation Script Usage
 
 ```bash
-# Sintaxis básica
-./install.sh [nombre_de_tu_app]
+# Basic syntax
+./install.sh [your_app_name]
 
-# Ejemplo práctico
+# Practical example
 ./install.sh dragon_ball_app
 ```
 
-### ¿Qué instala el script?
+### What does the script install?
 
-1. **Verifica el entorno**: Confirma que estás en un directorio frappe-bench válido
-2. **Detecta módulo**: Lee automáticamente el módulo correcto desde `modules.txt`
-3. **Copia temas**: Instala todos los temas (website + desk) con configuración automática
-4. **Instala fixtures**: Copia y configura fixtures con módulo correcto
-5. **Theme Switcher Mejorado**: Reemplaza el theme switcher de Frappe con versión enhanced
-6. **Auto-Cargador de Temas**: Integra auto-loader en desk.js para persistencia automática
-7. **Theme Preview API**: Instala endpoints para previews de temas con extracción de colores
-8. **User Extensions**: Añade sistema de gestión de preferencias de usuario
-9. **Backups**: Crea backups de archivos originales de Frappe
-10. **Verifica instalación**: Confirma que todo funciona correctamente
+1. **Environment Verification**: Confirms you're in a valid frappe-bench directory
+2. **Module Detection**: Automatically reads the correct module from `modules.txt`
+3. **Theme Copying**: Installs all themes (website + desk) with automatic configuration
+4. **Fixtures Installation**: Copies and configures fixtures with correct module
+5. **Enhanced Theme Switcher**: Replaces Frappe's theme switcher with enhanced version
+6. **Theme Auto-Loader**: Integrates auto-loader in desk.js for automatic persistence
+7. **Theme Preview API**: Installs endpoints for theme previews with color extraction
+8. **User Extensions**: Adds user preference management system
+9. **Backups**: Creates backups of original Frappe files
+10. **Installation Verification**: Confirms everything works correctly
 
-## 📋 Requisitos
+## 📋 Requirements
 
 - ✅ Frappe Framework v13+ 
-- ✅ Aplicación Frappe válida como destino
-- ✅ Permisos de escritura en el directorio `apps/`
+- ✅ Valid Frappe application as target
+- ✅ Write permissions in the `apps/` directory
 - ✅ Bash shell (Linux/macOS/WSL)
 
-## 🎨 Temas Incluidos
+## 🎨 Included Themes
 
 ### Website Themes
-**Dickface Theme**
-- Botones redondeados sin gradientes ni sombras
-- Tipografía con pesos: 300-800
-- Estilos Bootstrap personalizados
+**Custom Bootstrap Themes**
+- Rounded buttons without gradients or shadows
+- Typography with weights: 300-800
+- Custom Bootstrap styling
+- Clean and modern appearance
+- Responsive design elements
 
-**Dickhead Theme**  
-- Mismas características que Dickface
-- Variación de colores y espaciado
-
-### Desk Themes (Nuevos!)
+### Desk Themes (New!)
 **Dark Purple Desk**
-- Tema oscuro con acentos púrpura elegantes
-- Diseñado específicamente para la interfaz Frappe Desk
-- Colores: Background #1a1a2e, Accent #533483, Text #e6e6fa
-- Optimizado para formularios, listas y módulos
+- Dark theme with elegant purple accents
+- Designed specifically for Frappe Desk interface
+- Colors: Background #1a1a2e, Accent #533483, Text #e6e6fa
+- Optimized for forms, lists, and modules
 
 **Ocean Blue Desk**
-- Tema moderno con gradientes azul océano
-- Animaciones suaves y efectos visuales enhanced
-- Gradientes dinámicos y transiciones fluidas
-- Perfecto para uso diario con excelente legibilidad
+- Modern theme with ocean blue gradients
+- Smooth animations and enhanced visual effects
+- Dynamic gradients and fluid transitions
+- Perfect for daily use with excellent readability
 
-## 🎛️ Sistema de Temas Mejorado
+## 🎛️ Enhanced Theme System
 
-### Theme Switcher Enhanced (Ctrl+Shift+G)
-- **Previews Visuales**: Ve cómo se verá cada tema antes de aplicarlo
-- **Aplicación Instantánea**: Los temas se aplican inmediatamente sin refrescar
-- **Detección Inteligente**: Reconoce automáticamente temas personalizados
-- **Persistencia**: Guarda tu preferencia y la restaura automáticamente
+### Enhanced Theme Switcher (Ctrl+Shift+G)
+- **Visual Previews**: See how each theme looks before applying it
+- **Instant Application**: Themes are applied immediately without refreshing
+- **Smart Detection**: Automatically recognizes custom themes
+- **Persistence**: Saves your preference and restores it automatically
 
-### Auto-Cargador Integrado
-- **Carga Automática**: Tu tema favorito se carga automáticamente al iniciar sesión
-- **Sincronización**: Sincroniza preferencias entre diferentes dispositivos
-- **Fallback Inteligente**: Sistema robusto de recuperación ante errores
+### Integrated Auto-Loader
+- **Automatic Loading**: Your favorite theme loads automatically on login
+- **Synchronization**: Syncs preferences across different devices
+- **Smart Fallback**: Robust error recovery system
 
 ### Theme Preview API
-- **Extracción de Colores**: Analiza automáticamente CSS para generar previews
-- **Variables CSS**: Detecta y mapea variables CSS personalizadas
-- **Componentes**: Mapea colores específicos para navbar, sidebar, botones, etc.
-- **Validación**: Sistema completo de validación de colores y estilos
+- **Color Extraction**: Automatically analyzes CSS to generate previews
+- **CSS Variables**: Detects and maps custom CSS variables
+- **Components**: Maps specific colors for navbar, sidebar, buttons, etc.
+- **Validation**: Complete color and style validation system
 
-## 🔄 Actualización de Submódulo
+## 🔄 Submodule Update
 
 ```bash
-# Actualizar a la última versión
+# Update to latest version
 cd /path/to/frappe-bench
 git submodule update --remote themes-submodule
 
-# Reinstalar si hay cambios en temas
-./themes-submodule/install.sh mi_app
-bench --site mi-sitio migrate
+# Reinstall if there are theme changes
+./themes-submodule/install.sh my_app
+bench --site my-site migrate
 ```
 
-## 🐛 Solución de Problemas
+## 🐛 Troubleshooting
 
-### Theme Switcher no aparece (Ctrl+Shift+G)
+### Theme Switcher not appearing (Ctrl+Shift+G)
 
 ```bash
-# 1. Verificar que se construyeron los assets
+# 1. Verify assets were built
 bench build --app frappe
 
-# 2. Limpiar caché completamente  
-bench --site mi-sitio clear-cache
-bench --site mi-sitio clear-website-cache
+# 2. Clear cache completely  
+bench --site my-site clear-cache
+bench --site my-site clear-website-cache
 
-# 3. Verificar que desk.js fue reemplazado
+# 3. Verify desk.js was replaced
 ls -la sites/assets/frappe/js/frappe/desk.js*
 
-# 4. Refrescar el navegador completamente (Ctrl+F5)
+# 4. Refresh browser completely (Ctrl+F5)
 ```
 
-### Los temas no aparecen en el Theme Switcher
+### Themes don't appear in Theme Switcher
 
 ```bash
-# 1. Verificar que user_extension.py existe
-ls apps/mi_app/mi_app/user_extension.py
+# 1. Verify user_extension.py exists
+ls apps/my_app/my_app/user_extension.py
 
-# 2. Verificar import en __init__.py
-grep "user_extension" apps/mi_app/mi_app/__init__.py
+# 2. Verify import in __init__.py
+grep "user_extension" apps/my_app/my_app/__init__.py
 
-# 3. Probar API desde consola del navegador
-frappe.xcall('mi_app.user_extension.get_available_themes')
+# 3. Test API from browser console
+frappe.xcall('my_app.user_extension.get_available_themes')
 ```
 
-### Los temas no se aplican o no persisten
+### Themes don't apply or persist
 
 ```bash
-# 1. Verificar Theme Preview API
-frappe.xcall('mi_app.theme_preview_api.validate_theme_preview_api')
+# 1. Verify Theme Preview API
+frappe.xcall('my_app.theme_preview_api.validate_theme_preview_api')
 
-# 2. Verificar preferencias de usuario
-frappe.xcall('mi_app.user_extension.get_desk_theme_preference')
+# 2. Verify user preferences
+frappe.xcall('my_app.user_extension.get_desk_theme_preference')
 
-# 3. Limpiar localStorage del navegador
-# Abrir DevTools > Application > Local Storage > Clear
+# 3. Clear browser localStorage
+# Open DevTools > Application > Local Storage > Clear
 ```
 
-### Website themes no aparecen en la UI tradicional
+### Website themes don't appear in traditional UI
 
 ```bash
-# 1. Verificar migración
-bench --site mi-sitio migrate --verbose
+# 1. Verify migration
+bench --site my-site migrate --verbose
 
-# 2. Reinstalar fixtures
-bench --site mi-sitio install-fixtures
+# 2. Reinstall fixtures
+bench --site my-site install-fixtures
 
-# 3. Limpiar caché
-bench --site mi-sitio clear-cache
+# 3. Clear cache
+bench --site my-site clear-cache
 ```
 
-### Error de instalación
+### Installation error
 
 ```bash
-# Verificar permisos
-ls -la apps/mi_app/mi_app/
+# Verify permissions
+ls -la apps/my_app/my_app/
 
-# Verificar que la app existe
-bench --site mi-sitio list-apps
+# Verify app exists
+bench --site my-site list-apps
 
-# Reinstalar desde cero si es necesario
-./install.sh mi_app
+# Reinstall from scratch if necessary
+./install.sh my_app
 ```
 
-### Restaurar archivos originales de Frappe
+### Restore original Frappe files
 
 ```bash
-# Si algo sale mal, restaurar backups
+# If something goes wrong, restore backups
 cp sites/assets/frappe/js/frappe/desk.js.original sites/assets/frappe/js/frappe/desk.js
 cp sites/assets/frappe/js/frappe/ui/theme_switcher.js.original sites/assets/frappe/js/frappe/ui/theme_switcher.js
 
-# Reconstruir
+# Rebuild
 bench build --app frappe
 ```
 
-## 🚀 Uso después de la Instalación
+## 🚀 Usage After Installation
 
-### Cambio Rápido de Temas (Recomendado)
-1. **Usar Theme Switcher Mejorado:**
-   - Presiona `Ctrl+Shift+G` desde cualquier parte del desk
-   - Ve previews visuales de todos los temas disponibles
-   - Haz clic en cualquier tema para aplicarlo instantáneamente
-   - Tu selección se guarda automáticamente
+### Quick Theme Switching (Recommended)
+1. **Using Enhanced Theme Switcher:**
+   - Press `Ctrl+Shift+G` from anywhere in the desk
+   - See visual previews of all available themes
+   - Click on any theme to apply it instantly
+   - Your selection is saved automatically
 
-### Gestión Tradicional de Website Themes
-1. **Acceder a los website themes:**
+### Traditional Website Theme Management
+1. **Access website themes:**
    ```
    Setup > Website > Website Theme
    ```
 
-2. **Los website themes aparecerán como:**
-   - Dickface
-   - Dickhead
+2. **Website themes will appear as:**
+   - Custom Bootstrap themes with unique styling
+   - Clean and responsive designs
 
-3. **Seleccionar y configurar:**
-   - Haz clic en el tema deseado
-   - Ajusta las opciones (botones, sombras, etc.)
-   - Guarda los cambios
+3. **Select and configure:**
+   - Click on the desired theme
+   - Adjust options (buttons, shadows, etc.)
+   - Save changes
 
-### Temas de Desk Disponibles
-- **Frappe Light**: Tema claro por defecto
-- **Timeless Night**: Tema oscuro elegante
-- **Automatic**: Se adapta al tema del sistema
-- **Dark Purple Desk**: Tema púrpura personalizado 🆕
-- **Ocean Blue Desk**: Tema azul con gradientes 🆕
+### Available Desk Themes
+- **Frappe Light**: Default light theme
+- **Timeless Night**: Elegant dark theme
+- **Automatic**: Adapts to system theme
+- **Dark Purple Desk**: Custom purple theme 🆕
+- **Ocean Blue Desk**: Blue theme with gradients 🆕
 
-## 🔧 Funcionalidades Avanzadas
+## 🔧 Advanced Features
 
 ### Theme Preview API
 ```javascript
-// Obtener todos los temas con datos de preview
-frappe.xcall('tu_app.theme_preview_api.get_theme_preview_data')
+// Get all themes with preview data
+frappe.xcall('your_app.theme_preview_api.get_theme_preview_data')
   .then(response => console.log(response.themes));
 
-// Validar que la API funciona
-frappe.xcall('tu_app.theme_preview_api.validate_theme_preview_api')
+// Validate that API works
+frappe.xcall('your_app.theme_preview_api.validate_theme_preview_api')
   .then(result => console.log(result));
 ```
 
-### Gestión de Preferencias
+### Preference Management
 ```javascript
-// Guardar tema preferido
-frappe.xcall('tu_app.user_extension.save_desk_theme_preference', {
+// Save preferred theme
+frappe.xcall('your_app.user_extension.save_desk_theme_preference', {
   theme_name: 'dark_purple_desk'
 });
 
-// Obtener tema preferido
-frappe.xcall('tu_app.user_extension.get_desk_theme_preference')
+// Get preferred theme
+frappe.xcall('your_app.user_extension.get_desk_theme_preference')
   .then(result => console.log(result.theme));
 ```
 
-## 🔧 Personalización Avanzada
+## 🔧 Advanced Customization
 
-### Modificar un tema existente
+### Modify an existing theme
 
 ```bash
-# 1. Editar el archivo JSON del tema
-nano apps/mi_app/mi_app/website_theme/dickface/dickface.json
+# 1. Edit the theme's JSON file
+nano apps/my_app/my_app/website_theme/custom_theme/custom_theme.json
 
-# 2. Personalizar el SCSS
-# Edita el campo "theme_scss" en el JSON
+# 2. Customize the SCSS
+# Edit the "theme_scss" field in the JSON
 
-# 3. Compilar assets
-bench build --app mi_app
+# 3. Build assets
+bench build --app my_app
 ```
 
-### Agregar un nuevo tema
+### Add a new theme
 
 ```bash
-# 1. Crear directorio para el nuevo tema
-mkdir themes/mi_nuevo_tema
+# 1. Create directory for the new theme
+mkdir themes/my_new_theme
 
-# 2. Crear archivo JSON
-cat > themes/mi_nuevo_tema/mi_nuevo_tema.json << EOF
+# 2. Create JSON file
+cat > themes/my_new_theme/my_new_theme.json << EOF
 {
   "doctype": "Website Theme",
-  "name": "Mi Nuevo Tema",
-  "theme": "Mi Nuevo Tema", 
-  "module": "Tu App",
-  "theme_scss": "// Tu CSS aquí"
+  "name": "My New Theme",
+  "theme": "My New Theme", 
+  "module": "Your App",
+  "theme_scss": "// Your CSS here"
 }
 EOF
 
-# 3. Crear __init__.py
-touch themes/mi_nuevo_tema/__init__.py
+# 3. Create __init__.py
+touch themes/my_new_theme/__init__.py
 
-# 4. Actualizar fixtures
-# Editar fixtures/website_theme.json para incluir el nuevo tema
+# 4. Update fixtures
+# Edit fixtures/website_theme.json to include the new theme
 
-# 5. Reinstalar
-./install.sh mi_app
+# 5. Reinstall
+./install.sh my_app
 ```
 
-## 📝 Ejemplo de Integración
+## 📝 Integration Example
 
-### En tu aplicación Frappe:
+### In your Frappe application:
 
 ```python
-# hooks.py después de la instalación
+# hooks.py after installation
 fixtures = [
     {
         "doctype": "Website Theme",
         "filters": [
-            ["name", "in", ["Dickface", "Dickhead"]]
+            ["name", "in", ["Custom Theme 1", "Custom Theme 2"]]
         ]
     }
 ]
 ```
 
-### Estructura resultante en tu app:
+### Resulting structure in your app:
 
 ```
-apps/mi_app/
-├── mi_app/
-│   ├── website_theme/              # ← Todos los temas instalados aquí
-│   │   ├── dickface/               # Website theme
-│   │   ├── dickhead/               # Website theme  
+apps/my_app/
+├── my_app/
+│   ├── website_theme/              # ← All themes installed here
+│   │   ├── custom_theme_1/         # Website theme
+│   │   ├── custom_theme_2/         # Website theme  
 │   │   ├── dark_purple_desk/       # Desk theme 🆕
 │   │   └── ocean_blue_desk/        # Desk theme 🆕
-│   ├── fixtures/                   # ← Fixtures con configuración automática
+│   ├── fixtures/                   # ← Fixtures with automatic configuration
 │   │   └── website_theme.json
-│   ├── theme_preview_api.py        # ← API de previews 🆕
-│   ├── user_extension.py           # ← Gestión de preferencias 🆕
-│   ├── hooks.py                    # ← Actualizado automáticamente
-│   └── __init__.py                 # ← Imports agregados automáticamente
+│   ├── theme_preview_api.py        # ← Preview API 🆕
+│   ├── user_extension.py           # ← Preference management 🆕
+│   ├── hooks.py                    # ← Automatically updated
+│   └── __init__.py                 # ← Imports added automatically
 
-# Archivos de Frappe mejorados:
+# Enhanced Frappe files:
 sites/assets/frappe/js/frappe/
-├── desk.js                         # ← Con auto-loader integrado 🆕
-└── ui/theme_switcher.js           # ← Theme switcher enhanced 🆕
+├── desk.js                         # ← With integrated auto-loader 🆕
+└── ui/theme_switcher.js           # ← Enhanced theme switcher 🆕
 
-# Backups automáticos creados:
+# Automatic backups created:
 sites/assets/frappe/js/frappe/
-├── desk.js.original               # ← Backup del original
-└── ui/theme_switcher.js.original  # ← Backup del original
+├── desk.js.original               # ← Original backup
+└── ui/theme_switcher.js.original  # ← Original backup
 ```
 
-## 🤝 Contribuir
+## 🤝 Contributing
 
-1. Fork este repositorio
-2. Crea una rama: `git checkout -b nueva-feature`
-3. Haz tus cambios
-4. Commit: `git commit -am 'Agregar nueva feature'`
-5. Push: `git push origin nueva-feature`
-6. Crea un Pull Request
+1. Fork this repository
+2. Create a branch: `git checkout -b new-feature`
+3. Make your changes
+4. Commit: `git commit -am 'Add new feature'`
+5. Push: `git push origin new-feature`
+6. Create a Pull Request
 
-## � Documentación Adicional
+## 📚 Additional Documentation
 
-- **[Theme Preview API](THEME_PREVIEW_API.md)**: Documentación completa de la API de previews
-- **Endpoints disponibles**: `get_theme_preview_data`, `validate_theme_preview_api`
-- **Integración JavaScript**: Ejemplos de uso en el frontend
-- **Extracción de colores**: Algoritmos de análisis CSS automático
+- **[Theme Preview API](THEME_PREVIEW_API.md)**: Complete API documentation for previews
+- **Available endpoints**: `get_theme_preview_data`, `validate_theme_preview_api`
+- **JavaScript integration**: Frontend usage examples
+- **Color extraction**: Automatic CSS analysis algorithms
 
-## 🔄 Restauración y Mantenimiento
+## 🔄 Restoration and Maintenance
 
-### Actualizar el sistema de temas
+### Update theme system
 ```bash
-# Actualizar submódulo
+# Update submodule
 git submodule update --remote frappe-themes-submodule
 
-# Reinstalar con nuevas funcionalidades
-./frappe-themes-submodule/install.sh mi_app
+# Reinstall with new features
+./frappe-themes-submodule/install.sh my_app
 bench build --app frappe
-bench --site mi-sitio clear-cache
+bench --site my-site clear-cache
 ```
 
-### Agregar nuevos temas desk personalizados
+### Add new custom desk themes
 ```bash
-# 1. Crear directorio del tema
-mkdir themes/mi_tema_desk
+# 1. Create theme directory
+mkdir themes/my_desk_theme
 
-# 2. Crear archivo JSON con css_content
-cat > themes/mi_tema_desk/mi_tema_desk.json << 'EOF'
+# 2. Create JSON file with css_content
+cat > themes/my_desk_theme/my_desk_theme.json << 'EOF'
 {
-  "name": "Mi Tema Desk",
-  "theme": "Mi Tema Desk", 
+  "name": "My Desk Theme",
+  "theme": "My Desk Theme", 
   "module": "Website",
-  "css_content": "/* CSS para el desk aquí */"
+  "css_content": "/* Desk CSS here */"
 }
 EOF
 
-# 3. Reinstalar
-./install.sh mi_app
+# 3. Reinstall
+./install.sh my_app
 ```
 
-## ⚡ Características Técnicas
+## ⚡ Technical Features
 
-### Theme Switcher Enhanced
-- **Previews en tiempo real**: Generación automática de previews visuales
-- **Detección de temas**: Sistema inteligente de detección de temas personalizados
-- **Aplicación instantánea**: Sin necesidad de refrescar página
-- **Persistencia robusta**: Múltiples métodos de almacenamiento de preferencias
+### Enhanced Theme Switcher
+- **Real-time previews**: Automatic generation of visual previews
+- **Theme detection**: Intelligent system for detecting custom themes
+- **Instant application**: No page refresh needed
+- **Robust persistence**: Multiple preference storage methods
 
 ### Auto-Loader System
-- **Carga automática**: Restaura tema preferido al iniciar sesión
-- **Fallback inteligente**: Sistema robusto de recuperación ante errores
-- **Multi-app support**: Funciona con cualquier app de Frappe
-- **Cache management**: Optimización de rendimiento y memoria
+- **Automatic loading**: Restores preferred theme on login
+- **Smart fallback**: Robust error recovery system
+- **Multi-app support**: Works with any Frappe app
+- **Cache management**: Performance and memory optimization
 
 ### Theme Preview API
-- **Extracción inteligente**: Análisis automático de CSS y variables
-- **Mapeo de componentes**: Colores específicos para navbar, sidebar, etc.
-- **Validación robusta**: Sistema completo de validación de colores
-- **Error handling**: Manejo robusto de errores con fallbacks
+- **Intelligent extraction**: Automatic CSS and variable analysis
+- **Component mapping**: Specific colors for navbar, sidebar, etc.
+- **Robust validation**: Complete color validation system
+- **Error handling**: Robust error handling with fallbacks
 
-## �📄 Licencia
+## 📄 License
 
-MIT License - Úsalo libremente en tus proyectos.
+MIT License - Use it freely in your projects.
 
-## 🆘 Soporte
+## 🆘 Support
 
-- **Issues**: [GitHub Issues del repositorio]
-- **Documentación**: [THEME_PREVIEW_API.md](THEME_PREVIEW_API.md)
-- **Community**: [Foro de Frappe]
+- **Issues**: [Repository GitHub Issues]
+- **Documentation**: [THEME_PREVIEW_API.md](THEME_PREVIEW_API.md)
+- **Community**: [Frappe Forum]
 
 ---
 
-**💡 Tips Importantes**:
-- Usa `Ctrl+Shift+G` para cambiar temas rápidamente
-- Los temas se guardan automáticamente por usuario
-- Los backups de archivos originales se crean automáticamente
-- Mantén este repositorio como submódulo para recibir actualizaciones
+**💡 Important Tips**:
+- Use `Ctrl+Shift+G` to switch themes quickly
+- Themes are automatically saved per user
+- Original file backups are created automatically
+- Keep this repository as a submodule to receive updates

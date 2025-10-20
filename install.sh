@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # Frappe Themes Submodule Installer
-# Instalador de temas como submódulo independiente
-# Uso: ./install.sh [nombre_de_app_destino]
+# Theme installer as independent submodule
+# Usage: ./install.sh [target_app_name]
 
 set -e
 
-# Colores para output
+# Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
-NC='\033[0m' # Sin color
+NC='\033[0m' # No color
 
 echo -e "${GREEN}=== Frappe Themes Submodule Installer ===${NC}"
 
-# Verificar argumentos
+# Verify arguments
 if [ $# -eq 0 ]; then
-    echo -e "${RED}Error: Debes proporcionar el nombre de la aplicación de destino${NC}"
-    echo "Uso: $0 <nombre_app_destino>"
-    echo "Ejemplo: $0 mi_app"
+    echo -e "${RED}Error: You must provide the target application name${NC}"
+    echo "Usage: $0 <target_app_name>"
+    echo "Example: $0 my_app"
     exit 1
 fi
 

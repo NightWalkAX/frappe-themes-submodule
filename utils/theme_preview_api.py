@@ -1,40 +1,42 @@
 #!/usr/bin/env python3
 """
 Frappe Themes Submodule - Theme Preview API
-Endpoint específico para obtener datos de preview de temas
+Specific endpoint for obtaining theme preview data
 """
 
-import frappe
 import re
-import requests
 from urllib.parse import urljoin
+
+import frappe
+import requests
 
 
 @frappe.whitelist()
 def get_theme_preview_data(theme_name=None):
     """
-    Endpoint principal para obtener datos de preview de temas
-    Incluye colores principales, variables CSS y metadata para renderizar previews
+    Main endpoint for obtaining theme preview data
+    Includes main colors, CSS variables and metadata to render previews
 
     Args:
-        theme_name (str, optional): Nombre del tema específico. Si no se proporciona, devuelve todos.
+        theme_name (str, optional): Specific theme name. If not provided,
+                                   returns all themes.
 
     Returns:
-        dict or list: Datos de preview del tema o lista de todos los temas
+        dict or list: Theme preview data or list of all themes
     """
     try:
         if theme_name:
-            # Obtener datos de un tema específico
+            # Get data for a specific theme
             return get_single_theme_preview(theme_name)
         else:
-            # Obtener datos de todos los temas disponibles
+            # Get data for all available themes
             all_themes = []
 
-            # Agregar temas por defecto
+            # Add default themes
             default_themes = get_default_themes_preview()
             all_themes.extend(default_themes)
 
-            # Agregar temas personalizados
+            # Add custom themes
             custom_themes = get_custom_themes_preview()
             all_themes.extend(custom_themes)
 
@@ -49,13 +51,13 @@ def get_theme_preview_data(theme_name=None):
         return {
             "status": "error",
             "message": str(e),
-            "themes": get_default_themes_preview()  # Fallback a temas por defecto
+            "themes": get_default_themes_preview()  # Fallback to defaults
         }
 
 
 def get_default_themes_preview():
     """
-    Devuelve datos de preview para los temas por defecto de Frappe
+    Returns preview data for Frappe default themes
     """
     return [
         {

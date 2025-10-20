@@ -1,19 +1,19 @@
-# Theme Preview API - Documentación
+# Theme Preview API - Documentation
 
-## Descripción General
+## Overview
 
-El Theme Preview API proporciona endpoints para obtener datos detallados de temas para renderizar previews mejorados en el Theme Switcher. Incluye extracción de colores, variables CSS y componentes específicos para crear previews visuales precisos.
+The Theme Preview API provides endpoints to obtain detailed theme data for rendering enhanced previews in the Theme Switcher. It includes color extraction, CSS variables, and specific components to create accurate visual previews.
 
-## Endpoints Disponibles
+## Available Endpoints
 
 ### 1. `get_theme_preview_data(theme_name=None)`
 
-**Endpoint principal** para obtener datos de preview de temas.
+**Main endpoint** to obtain theme preview data.
 
-#### Parámetros:
-- `theme_name` (opcional): Nombre del tema específico. Si no se proporciona, devuelve todos los temas.
+#### Parameters:
+- `theme_name` (optional): Specific theme name. If not provided, returns all themes.
 
-#### Respuesta:
+#### Response:
 ```json
 {
   "status": "success",
@@ -49,9 +49,9 @@ El Theme Preview API proporciona endpoints para obtener datos detallados de tema
 
 ### 2. `get_single_theme_preview(theme_name)`
 
-Obtiene datos de preview para un tema específico.
+Gets preview data for a specific theme.
 
-#### Uso desde JavaScript:
+#### Usage from JavaScript:
 ```javascript
 frappe.xcall('frappe_themes_submodule.utils.theme_preview_api.get_theme_preview_data')
   .then(response => {
@@ -63,23 +63,23 @@ frappe.xcall('frappe_themes_submodule.utils.theme_preview_api.get_theme_preview_
 
 ### 3. `validate_theme_preview_api()`
 
-Valida que la API funcione correctamente.
+Validates that the API works correctly.
 
-## Estructura de Datos
+## Data Structure
 
 ### Theme Object
 
 ```javascript
 {
-  "name": "theme-name",           // Identificador único del tema
-  "label": "Theme Display Name",  // Nombre mostrado al usuario
-  "info": "Theme description",    // Descripción del tema
-  "is_custom": false,            // true si es un tema personalizado
-  "is_desk_theme": true,         // true si es para el desk
-  "theme_url": "/assets/...",    // URL del archivo CSS (opcional)
-  "css_content_preview": "...",  // Primeras líneas del CSS (opcional)
+  "name": "theme-name",           // Unique theme identifier
+  "label": "Theme Display Name",  // Name displayed to user
+  "info": "Theme description",    // Theme description
+  "is_custom": false,            // true if it's a custom theme
+  "is_desk_theme": true,         // true if it's for the desk
+  "theme_url": "/assets/...",    // CSS file URL (optional)
+  "css_content_preview": "...",  // First lines of CSS (optional)
   
-  // Colores principales extraídos del tema
+  // Main colors extracted from theme
   "preview_colors": {
     "primary": "#007bff",
     "secondary": "#6c757d", 
@@ -95,14 +95,14 @@ Valida que la API funcione correctamente.
     "border": "#dee2e6"
   },
   
-  // Variables CSS extraídas
+  // Extracted CSS variables
   "css_variables": {
     "--primary-color": "#007bff",
     "--text-color": "#212529",
     "--bg-color": "#ffffff"
   },
   
-  // Colores específicos para componentes del preview
+  // Specific colors for preview components
   "preview_components": {
     "navbar_bg": "#ffffff",
     "navbar_text": "#212529", 
@@ -118,14 +118,14 @@ Valida que la API funcione correctamente.
 }
 ```
 
-## Funcionalidades Principales
+## Main Features
 
-### Extracción de Colores
+### Color Extraction
 
-El API extrae automáticamente colores de los archivos CSS usando patrones inteligentes:
+The API automatically extracts colors from CSS files using intelligent patterns:
 
 ```python
-# Patrones de búsqueda para colores específicos
+# Search patterns for specific colors
 color_patterns = {
     "primary": [
         r'--primary[^:]*:\s*([^;;\n]+)',
@@ -138,30 +138,30 @@ color_patterns = {
 }
 ```
 
-### Validación de Colores
+### Color Validation
 
-Los colores extraídos se validan contra patrones CSS válidos:
-- Códigos hexadecimales: `#RGB`, `#RRGGBB`
-- Funciones CSS: `rgb()`, `rgba()`, `hsl()`, `hsla()`
-- Variables CSS: `var(--variable-name)`
-- Nombres de colores CSS estándar
+Extracted colors are validated against valid CSS patterns:
+- Hexadecimal codes: `#RGB`, `#RRGGBB`
+- CSS functions: `rgb()`, `rgba()`, `hsl()`, `hsla()`
+- CSS variables: `var(--variable-name)`
+- Standard CSS color names
 
-### Temas por Defecto
+### Default Themes
 
-Los temas light, dark y automatic incluyen datos predefinidos para garantizar previews consistentes.
+Light, dark, and automatic themes include predefined data to ensure consistent previews.
 
-## Integración con Theme Switcher
+## Integration with Theme Switcher
 
-### Uso en JavaScript
+### JavaScript Usage
 
 ```javascript
-// Obtener todos los temas con datos de preview
+// Get all themes with preview data
 frappe.xcall('frappe_themes_submodule.utils.theme_preview_api.get_theme_preview_data')
   .then(response => {
     if (response.status === 'success') {
       this.themes = response.themes.map(theme => ({
         ...theme,
-        // Datos adicionales para el switcher
+        // Additional data for switcher
         preview_colors: theme.preview_colors || {},
         css_variables: theme.css_variables || {}
       }));
@@ -171,7 +171,7 @@ frappe.xcall('frappe_themes_submodule.utils.theme_preview_api.get_theme_preview_
   });
 ```
 
-### Renderizado de Previews
+### Preview Rendering
 
 ```javascript
 generate_preview_html(theme) {
@@ -180,13 +180,13 @@ generate_preview_html(theme) {
   return `
     <div class="theme-preview" style="${this.generate_preview_styles(theme)}">
       <div class="navbar" style="background: ${colors.navbar_bg}; color: ${colors.navbar_text};">
-        <!-- Elementos del navbar -->
+        <!-- Navbar elements -->
       </div>
       <div class="sidebar" style="background: ${colors.sidebar_bg}; color: ${colors.sidebar_text};">
-        <!-- Elementos del sidebar -->
+        <!-- Sidebar elements -->
       </div>
       <div class="main" style="background: ${colors.main_bg}; color: ${colors.main_text};">
-        <!-- Contenido principal -->
+        <!-- Main content -->
       </div>
     </div>
   `;
@@ -195,47 +195,47 @@ generate_preview_html(theme) {
 
 ## Testing
 
-### Script de Prueba
+### Test Script
 
-Ejecutar el script de prueba para verificar la funcionalidad:
+Run the test script to verify functionality:
 
 ```bash
 bench --site [site-name] execute frappe-themes-submodule/utils/test_theme_preview.py
 ```
 
-### Validación Manual
+### Manual Validation
 
 ```javascript
-// Desde la consola del navegador
+// From browser console
 frappe.xcall('frappe_themes_submodule.utils.theme_preview_api.validate_theme_preview_api')
   .then(result => console.log(result));
 ```
 
-## Manejo de Errores
+## Error Handling
 
-La API incluye manejo robusto de errores:
+The API includes robust error handling:
 
-- **Fallback a temas por defecto** si falla la extracción de temas personalizados
-- **Validación de URLs** antes de descargar CSS
-- **Timeout en requests HTTP** (10 segundos)
-- **Logging detallado** de errores en Frappe
+- **Fallback to default themes** if custom theme extraction fails
+- **URL validation** before downloading CSS
+- **HTTP request timeout** (10 seconds)
+- **Detailed logging** of errors in Frappe
 
-## Rendimiento
+## Performance
 
-- **Caché de resultados** para evitar re-extracciones innecesarias
-- **Límite de tamaño** en contenido CSS (500 caracteres para preview)
-- **Timeout en requests** para evitar bloqueos
-- **Lazy loading** de datos de preview solo cuando se necesitan
+- **Result caching** to avoid unnecessary re-extractions
+- **Size limits** on CSS content (500 characters for preview)
+- **Request timeouts** to prevent blocking
+- **Lazy loading** of preview data only when needed
 
-## Compatibilidad
+## Compatibility
 
-- **Frappe v13+**: Totalmente compatible
-- **Temas legacy**: Fallback automático a datos por defecto
-- **Apps personalizadas**: Detección automática de temas en hooks
+- **Frappe v13+**: Fully compatible
+- **Legacy themes**: Automatic fallback to default data
+- **Custom apps**: Automatic theme detection in hooks
 
-## Próximas Funcionalidades
+## Upcoming Features
 
-- Cache persistente de datos de preview
-- Compresión de datos CSS
-- Soporte para temas de apps específicas
-- API de generación automática de colores complementarios
+- Persistent preview data cache
+- CSS data compression
+- Support for app-specific themes
+- API for automatic complementary color generation
