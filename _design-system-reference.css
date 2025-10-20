@@ -1,0 +1,322 @@
+/* ============================================================================
+   FRAPPE DESK - DESIGN SYSTEM REFERENCE
+   ============================================================================
+   
+   Este archivo contiene TODAS las variables de diseño (spacing, typography, 
+   shadows, borders, etc.) disponibles en Frappe Desk.
+   
+   Úsalo como referencia para saber qué valores están disponibles.
+   NO necesitas incluir este archivo, es solo documentación.
+   
+   Las variables ya están definidas en Frappe Desk por defecto.
+   Para sobrescribirlas en tu tema, usa :root con !important.
+============================================================================ */
+
+
+/* ============================================================================
+   ESPACIADO - Spacing (Padding & Margin)
+============================================================================ */
+:root {
+    /* Padding */
+    --padding-xs: 5px;
+    --padding-sm: 7px;
+    --padding-md: 15px;
+    --padding-lg: 20px;
+    --padding-xl: 30px;
+    --padding-2xl: 40px;
+    
+    /* Margin */
+    --margin-xs: 5px;
+    --margin-sm: 10px;
+    --margin-md: 15px;
+    --margin-lg: 20px;
+    --margin-xl: 30px;
+    --margin-2xl: 40px;
+}
+
+
+/* ============================================================================
+   TIPOGRAFÍA - Typography
+============================================================================ */
+:root {
+    /* Font Stack */
+    --font-stack: "InterVariable", "Inter", "-apple-system", "BlinkMacSystemFont", 
+                  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", 
+                  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", 
+                              Roboto, "Helvetica Neue", Arial, "Noto Sans", 
+                              "Liberation Sans", sans-serif, "Apple Color Emoji", 
+                              "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 
+                            "Liberation Mono", "Courier New", monospace;
+}
+
+:root {
+    /* Font Sizes */
+    --text-tiny: 11px;
+    --text-2xs: 12px;
+    --text-xs: 12px;
+    --text-sm: 13px;
+    --text-md: 14px;
+    --text-base: 14px;
+    --text-lg: 16px;
+    --text-xl: 18px;
+    --text-2xl: 20px;
+    --text-3xl: 24px;
+    --text-4xl: 26px;
+    --text-5xl: 28px;
+    --text-6xl: 32px;
+    --text-7xl: 40px;
+    --text-8xl: 44px;
+    --text-9xl: 48px;
+    --text-10xl: 52px;
+    --text-11xl: 56px;
+    --text-12xl: 64px;
+}
+
+:root {
+    /* Font Weights */
+    --weight-regular: 420;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-black: 800;
+}
+
+:root {
+    /* Line Heights - Text */
+    --text-line-height-3xl: 115%;
+    --text-line-height-4xl: 160%;
+    --text-line-height-7xl: 140%;
+    --text-line-height-12xl: 130%;
+    --text-line-height-14xl: 120%;
+    
+    /* Line Heights - Paragraph */
+    --para-line-height-2-xs: 160%;
+    --para-line-height-sm: 150%;
+    --para-line-height-2xl: 148%;
+    --para-line-height-3xl: 140%;
+}
+
+
+/* ============================================================================
+   BORDER RADIUS - Bordes Redondeados
+============================================================================ */
+:root {
+    --border-radius-tiny: 4px;
+    --border-radius-sm: 8px;
+    --border-radius: 8px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+    --border-radius-2xl: 20px;
+    --border-radius-full: 999px;
+}
+
+
+/* ============================================================================
+   SOMBRAS - Shadows
+============================================================================ */
+:root {
+    /* Drop Shadows */
+    --shadow-xs: rgba(0, 0, 0, 0.05) 0px 0.5px 0px 0px,
+                 rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+                 rgba(0, 0, 0, 0.05) 0px 2px 4px 0px;
+    
+    --shadow-sm: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    
+    --shadow-base: 0px 0px 1px rgba(0, 0, 0, 0.45), 
+                   0px 1px 2px rgba(0, 0, 0, 0.1);
+    
+    --shadow-md: 0px 0px 1px rgba(0, 0, 0, 0.12),
+                 0px 0.5px 2px rgba(0, 0, 0, 0.15),
+                 0px 2px 3px rgba(0, 0, 0, 0.16);
+    
+    --shadow-lg: 0px 0px 1px rgba(0, 0, 0, 0.35), 
+                 0px 6px 8px -4px rgba(0, 0, 0, 0.1);
+    
+    --shadow-xl: 0px 0px 1px rgba(0, 0, 0, 0.19),
+                 0px 1px 2px rgba(0, 0, 0, 0.07),
+                 0px 6px 15px -5px rgba(0, 0, 0, 0.11);
+    
+    --shadow-2xl: 0px 0px 1px rgba(0, 0, 0, 0.2),
+                  0px 1px 3px rgba(0, 0, 0, 0.05),
+                  0px 10px 24px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Custom Shadows */
+    --custom-shadow-sm: 0px 1px 4px rgba(0, 0, 0, 0.1);
+    
+    --drop-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.05),
+                   0px 0px 0px rgba(0, 0, 0, 0),
+                   0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+:root {
+    /* Component Shadows */
+    --modal-shadow: var(--shadow-md);
+    --card-shadow: var(--shadow-sm);
+    --btn-shadow: var(--shadow-xs);
+}
+
+:root {
+    /* Focus Shadows */
+    --focus-default: 0px 0px 0px 2px #c9c9c9;
+    --focus-blue: 0px 0px 0px 2px #65b9fc;
+    --focus-green: 0px 0px 0px 2px #5bb98c;
+    --focus-yellow: 0px 0px 0px 2px #fff0ad;
+    --focus-red: 0px 0px 0px 2px #eb9091;
+    --custom-status: 0px 0px 0px 1.5px #ffffff;
+}
+
+
+/* ============================================================================
+   TAMAÑOS DE COMPONENTES - Component Sizes
+============================================================================ */
+:root {
+    /* Botones e Inputs */
+    --btn-height: 28px;
+    --input-height: 28px;
+    
+    /* Checkbox */
+    --checkbox-size: 14px;
+    --checkbox-right-margin: var(--margin-xs);
+    
+    /* Navbar y Sidebar */
+    --navbar-height: 48px;
+    --sidebar-width: 220px;
+    --left-sidebar-width: 220px;
+    
+    /* Page Layout */
+    --page-head-height: 45px;
+    --page-bottom-margin: 60px;
+    --page-max-width: 900px;
+    
+    /* Timeline */
+    --timeline-item-icon-size: 30px;
+    --timeline-item-left-margin: var(--margin-lg);
+    --timeline-item-bottom-margin: var(--margin-sm);
+    --timeline-content-max-width: 700px;
+    --timeline-left-padding: calc(var(--padding-xl) + var(--timeline-item-icon-size) / 2);
+    
+    /* List */
+    --list-row-height: 30px;
+    --list-checkbox-padding: calc((var(--list-row-height) - var(--checkbox-size)) / 2);
+}
+
+
+/* ============================================================================
+   PADDING ESPECÍFICO - Specific Component Padding
+============================================================================ */
+:root {
+    --input-padding: 6px 8px;
+    --dropdown-padding: 4px 8px;
+    --grid-padding: 10px 8px;
+    --number-card-padding: 8px 8px 8px 12px;
+}
+
+
+/* ============================================================================
+   BREAKPOINTS - Responsive Design
+============================================================================ */
+:root {
+    /* Breakpoint Values */
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1440px;
+    
+    /* Width Values */
+    --xs-width: 0;
+    --sm-width: 567px;
+    --md-width: 768px;
+    --lg-width: 992px;
+    --xl-width: 1200px;
+    --xxl-width: 1440px;
+}
+
+
+/* ============================================================================
+   ICONOS - Icons
+============================================================================ */
+:root {
+    --icon-fill: transparent;
+    --icon-fill-bg: var(--fg-color);
+    --icon-stroke: var(--gray-800);
+    
+    /* Arrow SVGs */
+    --right-arrow-svg: url("data:image/svg+xml;utf8,<svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1.25 7.5L4.75 4L1.25 0.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    
+    --left-arrow-svg: url("data:image/svg+xml;utf8,<svg width='6' height='8' viewBox='0 0 6 8' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M7.5 9.5L4 6l3.5-3.5' stroke='%231F272E' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--modal-bg) !important;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--gray-400);
+    padding: 0.5rem;
+    margin-left: 4px;
+    margin-right: 4px;
+ }
+ 
+.field {
+    text-align: left;
+    width: 100%;
+    background-color: transparent !important;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    font-size: var(--text-sm);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 28px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--control-bg) !important;
+    background-clip: padding-box;
+    border: 1px solid #c7c7c7 !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: none;
+    transition: none;
+ }
+
+.app-logo {
+    width: 24px;
+    filter: brightness(80%) saturate(150%) invert(20%) sepia(50%) saturate(400%) hue-rotate(180deg) brightness(90%) contrast(110%);
+}
+/* ============================================================================
+   NOTAS IMPORTANTES
+============================================================================ */
+
+/*
+
+CÓMO USAR ESTAS VARIABLES EN TU TEMA:
+
+1. NO incluyas este archivo en tu tema
+2. Estas variables YA EXISTEN en Frappe Desk
+3. Para sobrescribirlas, usa :root con !important en tu archivo de tema
+
+Ejemplo:
+:root {
+    --bg-color: #1a1a2e !important;
+    --text-color: #e6e6fa !important;
+    --primary: #533483 !important;
+}
+
+4. Solo sobrescribe las variables que necesites cambiar
+5. No copies todo, solo lo que tu tema necesita personalizar
+
+*/

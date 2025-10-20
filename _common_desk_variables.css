@@ -1,0 +1,271 @@
+/* ============================================================================
+   DARK PURPLE THEME - Variables Override Example
+   ============================================================================
+   
+   Este es el archivo PRINCIPAL de un tema. Solo incluye las variables que 
+   necesitas sobrescribir para personalizar el Frappe Desk.
+   
+   Todas estas variables ya existen en Frappe por defecto, aquí las 
+   sobrescribimos con !important para forzar nuestros valores.
+   
+   IMPORTANTE: Solo incluye las variables que realmente quieres cambiar.
+   No copies todo, mantén este archivo limpio y enfocado.
+============================================================================ */
+
+
+/* ============================================================================
+   COLORES PRINCIPALES DEL TEMA
+============================================================================ */
+:root {
+    /* Colores base del tema */
+    --primary: #533483 !important;
+    --secondary: #6a4c93 !important;
+    --dark: #1a1a2e !important;
+    --light: #e6e6fa !important;
+}
+
+
+/* ============================================================================
+   COLORES DE FONDO - Backgrounds
+============================================================================ */
+:root {
+    /* Fondo principal */
+    --bg-color: #1a1a2e !important;
+    --fg-color: #16213e !important;
+    --card-bg: #16213e !important;
+    
+    /* Fondos sutiles */
+    --subtle-accent: #0f3460 !important;
+    --subtle-fg: #16213e !important;
+    
+    /* Navbar y modales */
+    --navbar-bg: #0f3460 !important;
+    --modal-bg: #16213e !important;
+    --popover-bg: #16213e !important;
+    --toast-bg: #16213e !important;
+    
+    /* Controles */
+    --control-bg: #0f3460 !important;
+    --control-bg-on-gray: #1a1a2e !important;
+    --disabled-control-bg: #0f3460 !important;
+    
+    /* Sidebar */
+    --sidebar-hover-color: #0f3460 !important;
+    --sidebar-active-color: #533483 !important;
+    --sidebar-select-color: #533483 !important;
+}
+
+
+/* ============================================================================
+   COLORES DE TEXTO - Text Colors
+============================================================================ */
+:root {
+    --text-color: #e6e6fa !important;
+    --text-neutral: #e6e6fa !important;
+    --heading-color: #ffffff !important;
+    --text-muted: #b19cd9 !important;
+    --text-light: #8e7cc3 !important;
+    --text-dark: #ffffff !important;
+    --disabled-text-color: #6a4c93 !important;
+}
+
+
+/* ============================================================================
+   COLORES DE BOTONES - Button Colors
+============================================================================ */
+:root {
+    /* Botón primario */
+    --btn-primary: #533483 !important;
+    
+    /* Botón default */
+    --btn-default-bg: #16213e !important;
+    --btn-default-hover-bg: #0f3460 !important;
+}
+
+
+/* ============================================================================
+   COLORES DE BORDES - Border Colors
+============================================================================ */
+:root {
+    --border-color: #0f3460 !important;
+    --dark-border-color: #533483 !important;
+    --table-border-color: #0f3460 !important;
+    --divider-color: rgba(83, 52, 131, 0.3) !important;
+    --sidebar-border-color: #0f3460 !important;
+    --border-primary: #533483 !important;
+}
+
+
+/* ============================================================================
+   COLORES DE INPUT - Input Colors
+============================================================================ */
+:root {
+    --input-disabled-bg: #0f3460 !important;
+    --awesomebar-focus-bg: #16213e !important;
+    --awesomplete-hover-bg: #0f3460 !important;
+}
+
+
+/* ============================================================================
+   HIGHLIGHTS Y SELECCIONES
+============================================================================ */
+:root {
+    --highlight-color: #533483 !important;
+    --yellow-highlight-color: #6a4c93 !important;
+    --fg-hover-color: #0f3460 !important;
+}
+
+
+/* ============================================================================
+   SCROLLBAR
+============================================================================ */
+:root {
+    --scrollbar-thumb-color: #533483 !important;
+    --scrollbar-track-color: #0f3460 !important;
+}
+
+
+/* ============================================================================
+   KANBAN
+============================================================================ */
+:root {
+    --kanban-column-bg: #16213e !important;
+    --kanban-card-bg: #0f3460 !important;
+    --kanban-card-hover-bg: #533483 !important;
+    --kanban-new-card-bg: #1a1a2e !important;
+    --kanban-new-card-hover-bg: #16213e !important;
+}
+
+
+/* ============================================================================
+   CHECKBOX Y SWITCH
+============================================================================ */
+:root {
+    --checkbox-color: #e6e6fa !important;
+    --checkbox-focus-shadow: 0 0 0 2px #533483 !important;
+    --checkbox-gradient: linear-gradient(180deg, #533483 -124.51%, #6a4c93 100%) !important;
+    --switch-bg: #0f3460 !important;
+}
+
+
+/* ============================================================================
+   SOMBRAS - Shadows (opcional)
+============================================================================ */
+:root {
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.5) !important;
+    --shadow-lg: 0px 8px 16px rgba(0, 0, 0, 0.5) !important;
+    --card-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    --modal-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+
+/* ============================================================================
+   FOCUS STATES
+============================================================================ */
+:root {
+    --focus-default: 0px 0px 0px 2px #533483 !important;
+    --focus-blue: 0px 0px 0px 2px #6a4c93 !important;
+}
+
+
+/* ============================================================================
+   COLORES SEMÁNTICOS - Semantic Colors (mantener visibilidad)
+============================================================================ */
+:root {
+    /* Success */
+    --success: #30a66d !important;
+    --green-600: #30a66d !important;
+    --alert-text-success: #30a66d !important;
+    --alert-bg-success: rgba(48, 166, 109, 0.1) !important;
+    
+    /* Warning */
+    --warning: #edba13 !important;
+    --yellow-500: #edba13 !important;
+    --alert-text-warning: #edba13 !important;
+    --alert-bg-warning: rgba(237, 186, 19, 0.1) !important;
+    
+    /* Danger */
+    --danger: #e03636 !important;
+    --red-500: #e03636 !important;
+    --alert-text-danger: #e03636 !important;
+    --alert-bg-danger: rgba(224, 54, 54, 0.1) !important;
+    
+    /* Info */
+    --info: #0289f7 !important;
+    --blue-500: #0289f7 !important;
+    --alert-text-info: #0289f7 !important;
+    --alert-bg-info: rgba(2, 137, 247, 0.1) !important;
+}
+
+
+/* ============================================================================
+   AVATARES - Avatars (ajustar para tema oscuro)
+============================================================================ */
+:root {
+    --avatar-frame-bg: #0f3460 !important;
+    --avatar-frame-color: #533483 !important;
+    --avatar-frame-border: #16213e !important;
+}
+
+
+/* ============================================================================
+   CODE BLOCKS
+============================================================================ */
+:root {
+    --code-block-bg: #0f3460 !important;
+    --code-block-text: #b19cd9 !important;
+}
+
+
+/* ============================================================================
+   TIMELINE
+============================================================================ */
+:root {
+    --timeline-badge-bg: #533483 !important;
+    --timeline-badge-color: #ffffff !important;
+}
+
+
+/* ============================================================================
+   MENCIONES
+============================================================================ */
+:root {
+    --user-mention-bg-color: #533483 !important;
+    --group-mention-bg-color: #6a4c93 !important;
+}
+
+
+/* ============================================================================
+   OTROS
+============================================================================ */
+:root {
+    --skeleton-bg: #0f3460 !important;
+    --progress-bar-bg: #533483 !important;
+    --placeholder-color: #0f3460 !important;
+    --icon-stroke: #b19cd9 !important;
+}
+
+
+/* ============================================================================
+   GRÁFICAS - Charts (ajustar para tema oscuro)
+============================================================================ */
+:root {
+    --charts-label-color: #e6e6fa !important;
+    --charts-axis-line-color: #0f3460 !important;
+    --charts-tooltip-bg: #16213e !important;
+    --charts-tooltip-title: #ffffff !important;
+    --charts-tooltip-label: #b19cd9 !important;
+    --charts-tooltip-value: #e6e6fa !important;
+    --charts-legend-label: #e6e6fa !important;
+    --charts-legend-value: #b19cd9 !important;
+}
+
+
+/* ============================================================================
+   DIFF COLORS (Git)
+============================================================================ */
+:root {
+    --diff-added: rgba(48, 166, 109, 0.2) !important;
+    --diff-removed: rgba(224, 54, 54, 0.2) !important;
+}

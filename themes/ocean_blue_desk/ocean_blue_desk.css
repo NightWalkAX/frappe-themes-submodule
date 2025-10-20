@@ -1,0 +1,508 @@
+/* ============================================================================
+   OCEAN BLUE DESK THEME - COLOR OVERRIDES
+   ============================================================================ */
+
+:root {
+    /* Primary Colors - Ocean Blue */
+    --primary: #3498db !important;
+    --secondary: #2980b9 !important;
+    --primary-dark: #2980b9 !important;
+    --primary-light: #5dade2 !important;
+    
+    /* Background Colors */
+    --bg-color: #1a2332 !important;
+    --fg-color: #243447 !important;
+    --card-bg: #2c3e50 !important;
+    --subtle-fg: #243447 !important;
+    --subtle-accent: #34495e !important;
+    
+    /* Navbar y modales */
+    --navbar-bg: #1e2d3d !important;
+    --modal-bg: #2c3e50 !important;
+    --popover-bg: #2c3e50 !important;
+    --toast-bg: #2c3e50 !important;
+    
+    /* Controles */
+    --control-bg: #34495e !important;
+    --control-bg-on-gray: #1a2332 !important;
+    --disabled-control-bg: #34495e !important;
+    
+    /* Text Colors */
+    --text-color: #ecf0f1 !important;
+    --text-neutral: #ecf0f1 !important;
+    --heading-color: #ffffff !important;
+    --text-muted: #7fb3d5 !important;
+    --text-light: #85c1e9 !important;
+    --text-dark: #ffffff !important;
+    --disabled-text-color: #5dade2 !important;
+    --text-on-primary: #ffffff !important;
+    
+    /* Sidebar Colors */
+    --sidebar-bg: #1e2d3d !important;
+    --sidebar-hover-color: #34495e !important;
+    --sidebar-active-color: #3498db !important;
+    --sidebar-select-color: #3498db !important;
+    --sidebar-border-color: #34495e !important;
+    
+    /* Button Colors */
+    --btn-primary: #3498db !important;
+    --btn-default-bg: #2c3e50 !important;
+    --btn-default-hover-bg: #34495e !important;
+    
+    /* Border Colors */
+    --border-color: #34495e !important;
+    --dark-border-color: #3498db !important;
+    --table-border-color: #34495e !important;
+    --divider-color: rgba(52, 152, 219, 0.3) !important;
+    --border-primary: #3498db !important;
+    
+    /* Input Colors */
+    --input-disabled-bg: #34495e !important;
+    --awesomebar-focus-bg: #2c3e50 !important;
+    --awesomplete-hover-bg: #34495e !important;
+    
+    /* Highlights y Selecciones */
+    --highlight-color: #3498db !important;
+    --yellow-highlight-color: #5dade2 !important;
+    --fg-hover-color: #34495e !important;
+    
+    /* Scrollbar */
+    --scrollbar-thumb-color: #3498db !important;
+    --scrollbar-track-color: #34495e !important;
+    
+    /* Kanban */
+    --kanban-column-bg: #2c3e50 !important;
+    --kanban-card-bg: #34495e !important;
+    --kanban-card-hover-bg: #3498db !important;
+    --kanban-new-card-bg: #1a2332 !important;
+    --kanban-new-card-hover-bg: #2c3e50 !important;
+    
+    /* Checkbox y Switch */
+    --checkbox-color: #ecf0f1 !important;
+    --checkbox-focus-shadow: 0 0 0 2px #3498db !important;
+    --checkbox-gradient: linear-gradient(180deg, #3498db -124.51%, #5dade2 100%) !important;
+    --switch-bg: #34495e !important;
+    
+    /* Shadows */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.4) !important;
+    --shadow-md: 0px 4px 8px rgba(0, 0, 0, 0.4) !important;
+    --shadow-lg: 0px 8px 16px rgba(0, 0, 0, 0.4) !important;
+    --card-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4) !important;
+    --modal-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important;
+    
+    /* Focus States */
+    --focus-default: 0px 0px 0px 2px #3498db !important;
+    --focus-blue: 0px 0px 0px 2px #5dade2 !important;
+    
+    /* Colores Semánticos */
+    --success: #27ae60 !important;
+    --green-600: #27ae60 !important;
+    --alert-text-success: #27ae60 !important;
+    --alert-bg-success: rgba(39, 174, 96, 0.1) !important;
+    
+    --warning: #f39c12 !important;
+    --yellow-500: #f39c12 !important;
+    --alert-text-warning: #f39c12 !important;
+    --alert-bg-warning: rgba(243, 156, 18, 0.1) !important;
+    
+    --danger: #e74c3c !important;
+    --red-500: #e74c3c !important;
+    --alert-text-danger: #e74c3c !important;
+    --alert-bg-danger: rgba(231, 76, 60, 0.1) !important;
+    
+    --info: #3498db !important;
+    --blue-500: #3498db !important;
+    --alert-text-info: #3498db !important;
+    --alert-bg-info: rgba(52, 152, 219, 0.1) !important;
+    
+    /* Avatares */
+    --avatar-frame-bg: #34495e !important;
+    --avatar-frame-color: #3498db !important;
+    --avatar-frame-border: #2c3e50 !important;
+    
+    /* Code Blocks */
+    --code-block-bg: #34495e !important;
+    --code-block-text: #7fb3d5 !important;
+    
+    /* Timeline */
+    --timeline-badge-bg: #3498db !important;
+    --timeline-badge-color: #ffffff !important;
+    
+    /* Menciones */
+    --user-mention-bg-color: #3498db !important;
+    --group-mention-bg-color: #5dade2 !important;
+    
+    /* Otros */
+    --skeleton-bg: #34495e !important;
+    --progress-bar-bg: #3498db !important;
+    --placeholder-color: #34495e !important;
+    --icon-stroke: #7fb3d5 !important;
+    
+    /* Gráficas */
+    --charts-label-color: #ecf0f1 !important;
+    --charts-axis-line-color: #34495e !important;
+    --charts-tooltip-bg: #2c3e50 !important;
+    --charts-tooltip-title: #ffffff !important;
+    --charts-tooltip-label: #7fb3d5 !important;
+    --charts-tooltip-value: #ecf0f1 !important;
+    --charts-legend-label: #ecf0f1 !important;
+    --charts-legend-value: #7fb3d5 !important;
+    
+    /* Diff Colors */
+    --diff-added: rgba(39, 174, 96, 0.2) !important;
+    --diff-removed: rgba(231, 76, 60, 0.2) !important;
+}
+
+
+/* ============================================================================
+   OCEAN BLUE DESK THEME - COMPONENT STYLES
+   ============================================================================ */
+
+/* Main Layout */
+.layout-main {
+    background: linear-gradient(135deg, #1a2332 0%, #243447 100%) !important;
+    color: #ecf0f1 !important;
+}
+
+/* Sidebar */
+.layout-side-section {
+    background: linear-gradient(180deg, #1e2d3d 0%, #243447 100%) !important;
+    border-right: 1px solid #34495e !important;
+    color: #ecf0f1 !important;
+}
+
+.layout-side-section .standard-sidebar-item {
+    color: #ecf0f1 !important;
+    transition: all 0.3s ease !important;
+}
+
+.layout-side-section .standard-sidebar-item:hover {
+    background-color: rgba(52, 152, 219, 0.2) !important;
+    border-radius: 8px !important;
+    transform: translateX(5px) !important;
+}
+
+.layout-side-section .standard-sidebar-item.selected,
+.layout-side-section .standard-sidebar-item:active {
+    background-color: rgba(52, 152, 219, 0.3) !important;
+    border-left: 3px solid #3498db !important;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #1e2d3d 0%, #243447 100%) !important;
+    border-bottom: 1px solid #34495e !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #ecf0f1 !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.navbar .nav-link:hover {
+    color: #3498db !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #3498db, #2980b9) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6) !important;
+    background: linear-gradient(45deg, #5dade2, #3498db) !important;
+}
+
+.btn-secondary,
+.btn-default {
+    background: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    color: #ecf0f1 !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-secondary:hover,
+.btn-default:hover {
+    background: #34495e !important;
+    border-color: #3498db !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Form Controls */
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+    background-color: #2c3e50 !important;
+    border: 2px solid #34495e !important;
+    border-radius: 8px !important;
+    color: #ecf0f1 !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    background-color: #34495e !important;
+    border-color: #3498db !important;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25) !important;
+    transform: scale(1.01) !important;
+    color: #ecf0f1 !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+    color: #7fb3d5 !important;
+    opacity: 0.7;
+}
+
+/* Cards and Widgets */
+.widget,
+.card,
+.frappe-card {
+    background: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.widget:hover,
+.card:hover,
+.frappe-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3) !important;
+    border-color: #3498db !important;
+}
+
+/* List Items */
+.list-item,
+.list-row {
+    background-color: #2c3e50 !important;
+    border-bottom: 1px solid #34495e !important;
+    border-radius: 6px !important;
+    margin: 2px 0 !important;
+    transition: all 0.3s ease !important;
+    color: #ecf0f1 !important;
+}
+
+.list-item:hover,
+.list-row:hover {
+    background: linear-gradient(90deg, #34495e, #2c3e50) !important;
+    transform: translateX(5px) !important;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2) !important;
+    border-left: 3px solid #3498db !important;
+}
+
+.list-item.selected,
+.list-row.selected {
+    background: rgba(52, 152, 219, 0.2) !important;
+    border-left: 3px solid #3498db !important;
+}
+
+/* Module Icons */
+.module-icon {
+    background: linear-gradient(45deg, #3498db, #2980b9) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.module-icon:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6) !important;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    background-color: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dropdown-item {
+    color: #ecf0f1 !important;
+    border-radius: 6px !important;
+    margin: 2px 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(90deg, #3498db, #2980b9) !important;
+    color: white !important;
+    transform: translateX(5px) !important;
+}
+
+/* Tables */
+.table,
+.datatable {
+    background-color: #2c3e50 !important;
+    color: #ecf0f1 !important;
+}
+
+.table thead th {
+    background-color: #1e2d3d !important;
+    color: #3498db !important;
+    border-color: #34495e !important;
+}
+
+.table tbody tr {
+    border-color: #34495e !important;
+    transition: all 0.3s ease !important;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+}
+
+/* Modals */
+.modal-content {
+    background-color: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.modal-header {
+    background-color: #1e2d3d !important;
+    border-bottom: 1px solid #34495e !important;
+    color: #ecf0f1 !important;
+}
+
+.modal-footer {
+    background-color: #1e2d3d !important;
+    border-top: 1px solid #34495e !important;
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #34495e !important;
+}
+
+.nav-tabs .nav-link {
+    color: #7fb3d5 !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #3498db !important;
+    border-bottom: 2px solid #3498db !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: #3498db !important;
+    background-color: transparent !important;
+    border-bottom: 2px solid #3498db !important;
+}
+
+/* Badges */
+.badge {
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+}
+
+.badge-primary {
+    background-color: #3498db !important;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px !important;
+    border: none !important;
+}
+
+/* Page Header */
+.page-head {
+    background-color: #2c3e50 !important;
+    border-bottom: 2px solid #34495e !important;
+}
+
+.page-title {
+    color: #ecf0f1 !important;
+}
+
+/* Filters */
+.filter-section {
+    background-color: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    border-radius: 8px !important;
+}
+
+/* Awesomplete (Autocomplete) */
+.awesomplete > ul {
+    background-color: #2c3e50 !important;
+    border: 1px solid #34495e !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.awesomplete > ul > li {
+    color: #ecf0f1 !important;
+}
+
+.awesomplete > ul > li:hover,
+.awesomplete > ul > li[aria-selected="true"] {
+    background-color: #3498db !important;
+    color: white !important;
+}
+
+.column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--modal-bg) !important;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--gray-400);
+    padding: 0.5rem;
+    margin-left: 4px;
+    margin-right: 4px;
+ }
+ 
+.field {
+    text-align: left;
+    width: 100%;
+    background-color: transparent !important;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid transparent;
+    padding: 0.3rem;
+    font-size: var(--text-sm);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 28px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--control-bg) !important;
+    background-clip: padding-box;
+    border: 1px solid #c7c7c7 !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: none;
+    transition: none;
+ }
+
+ .app-logo {
+    width: 24px;
+    filter: brightness(80%) saturate(150%) invert(20%) sepia(50%) saturate(400%) hue-rotate(180deg) brightness(90%) contrast(110%);
+}

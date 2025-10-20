@@ -31,6 +31,7 @@ def get_available_themes():
 def load_desk_themes_from_files():
     """
     Carga temas de desk desde archivos JSON locales en el directorio website_theme/
+    Busca archivos CSS separados (.css) y hace fallback al JSON si no existen
     """
     import os
     import json
@@ -51,9 +52,11 @@ def load_desk_themes_from_files():
                 
                 if os.path.isdir(theme_path) and theme_folder not in ["__pycache__"]:
                     json_file = os.path.join(theme_path, f"{theme_folder}.json")
+                    css_file = os.path.join(theme_path, f"{theme_folder}.css")
                     
                     if os.path.exists(json_file):
                         try:
+                            # 1. Leer metadata del JSON
                             with open(json_file, 'r', encoding='utf-8') as f:
                                 theme_data = json.load(f)
                             
@@ -61,24 +64,40 @@ def load_desk_themes_from_files():
                             
                             # Evitar temas por defecto
                             if theme_name not in ["light", "dark", "automatic", ""]:
-                                # Solo cargar temas que tengan css_content (temas de desk)
-                                if theme_data.get("css_content"):
+                                # 2. Intentar leer CSS desde archivo separado
+                                css_content = ""
+                                css_source = ""
+                                
+                                if os.path.exists(css_file):
+                                    # Prioridad 1: Leer desde archivo .css
+                                    with open(css_file, 'r', encoding='utf-8') as f:
+                                        css_content = f.read()
+                                    css_source = "external CSS file"
+                                    frappe.logger().info(f"[Frappe Themes] ✓ Loaded CSS from file: {css_file}")
+                                else:
+                                    # Prioridad 2: Fallback al CSS en JSON
+                                    css_content = theme_data.get("css_content", "")
+                                    css_source = "JSON css_content"
+                                    frappe.logger().info(f"[Frappe Themes] ⚠ No CSS file found, using JSON for: {theme_folder}")
+                                
+                                # 3. Solo cargar temas que tengan CSS (de cualquier fuente)
+                                if css_content:
                                     new_theme = {
                                         "name": theme_name.replace(" ", "_").lower(),
                                         "label": theme_data.get("theme", theme_folder),
-                                        "info": f"Desk theme: {theme_data.get('theme', theme_folder)}",
-                                        "css_content": theme_data.get("css_content"),
+                                        "info": f"Desk theme: {theme_data.get('theme', theme_folder)} (from {css_source})",
+                                        "css_content": css_content,
                                         "theme_url": theme_data.get("theme_url"),
                                         "is_desk_theme": True
                                     }
                                     
-                                    frappe.logger().info(f"[Frappe Themes] Loaded desk theme: {new_theme['name']}")
+                                    frappe.logger().info(f"[Frappe Themes] ✓ Loaded desk theme: {new_theme['name']} from {css_source}")
                                     themes.append(new_theme)
                                 else:
-                                    frappe.logger().info(f"[Frappe Themes] Skipped theme without css_content: {theme_name}")
+                                    frappe.logger().info(f"[Frappe Themes] ✗ Skipped theme without CSS: {theme_name}")
                         
                         except Exception as e:
-                            frappe.logger().error(f"[Frappe Themes] Error loading theme {json_file}: {str(e)}")
+                            frappe.logger().error(f"[Frappe Themes] ✗ Error loading theme {theme_folder}: {str(e)}")
         else:
             frappe.logger().info(f"[Frappe Themes] Themes directory not found: {themes_dir}")
     

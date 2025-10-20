@@ -94,9 +94,20 @@ for theme_dir in "$SOURCE_THEMES_DIR"/*; do
             echo -e "    ${YELLOW}⚠ No se encontró archivo JSON para $theme_name${NC}"
         fi
         
-        # Verificar que se copió correctamente
+        # Verificar archivos copiados
         if [ -d "$TARGET_THEMES_DIR/$theme_name" ]; then
             echo -e "    ${GREEN}✓ Tema $theme_name copiado exitosamente${NC}"
+            
+            # Verificar archivos específicos copiados
+            if [ -f "$TARGET_THEMES_DIR/$theme_name/$theme_name.json" ]; then
+                echo -e "      ✓ $theme_name.json"
+            fi
+            if [ -f "$TARGET_THEMES_DIR/$theme_name/$theme_name.css" ]; then
+                echo -e "      ${GREEN}✓ $theme_name.css (archivo CSS separado)${NC}"
+            fi
+            if [ -f "$TARGET_THEMES_DIR/$theme_name/__init__.py" ]; then
+                echo -e "      ✓ __init__.py"
+            fi
         else
             echo -e "    ${RED}✗ Error copiando tema $theme_name${NC}"
         fi

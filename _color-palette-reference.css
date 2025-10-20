@@ -1,0 +1,594 @@
+/* ============================================================================
+   FRAPPE DESK - COLOR PALETTE REFERENCE
+   ============================================================================
+   
+   Este archivo contiene TODAS las variables de color disponibles en Frappe Desk.
+   Úsalo como referencia para saber qué colores están disponibles.
+   NO necesitas incluir este archivo, es solo documentación.
+   
+   Las variables ya están definidas en Frappe Desk por defecto.
+   Para sobrescribirlas en tu tema, usa :root con !important.
+============================================================================ */
+
+
+/* ============================================================================
+   COLORES BASE - Bootstrap/Primary Colors
+============================================================================ */
+:root {
+    /* Colores Bootstrap básicos */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #7c7c7c;
+    --gray-dark: #383838;
+    
+    /* Colores semánticos */
+    --primary: #171717;
+    --secondary: #7c7c7c;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #e03636;
+    --light: #f3f3f3;
+    --dark: #383838;
+}
+
+
+/* ============================================================================
+   ESCALA DE GRISES - Gray Scale (50-900)
+============================================================================ */
+:root {
+    --gray-50: #f8f8f8;
+    --gray-100: #f3f3f3;
+    --gray-200: #ededed;
+    --gray-300: #e2e2e2;
+    --gray-400: #c7c7c7;
+    --gray-500: #999999;
+    --gray-600: #7c7c7c;
+    --gray-700: #525252;
+    --gray-800: #383838;
+    --gray-900: #171717;
+}
+
+
+/* ============================================================================
+   COLORES AZULES - Blue Scale (50-900)
+============================================================================ */
+:root {
+    --blue-50: #f7fbfd;
+    --blue-100: #edf6fd;
+    --blue-200: #e3f1fd;
+    --blue-300: #c9e7fc;
+    --blue-400: #70b6f0;
+    --blue-500: #0289f7;
+    --blue-600: #007be0;
+    --blue-700: #0070cc;
+    --blue-800: #005ca3;
+    --blue-900: #004880;
+}
+
+
+/* ============================================================================
+   COLORES VERDES - Green Scale (50-900)
+============================================================================ */
+:root {
+    --green-50: #f3fcf5;
+    --green-100: #e4f5e9;
+    --green-200: #daf0e1;
+    --green-300: #cae5d4;
+    --green-400: #b6dec5;
+    --green-500: #59ba8b;
+    --green-600: #30a66d;
+    --green-700: #278f5e;
+    --green-800: #16794c;
+    --green-900: #173b2c;
+}
+
+
+/* ============================================================================
+   COLORES ROJOS - Red Scale (50-900)
+============================================================================ */
+:root {
+    --red-50: #fff7f7;
+    --red-100: #fff0f0;
+    --red-200: #fcd7d7;
+    --red-300: #f9c6c6;
+    --red-400: #eb9091;
+    --red-500: #e03636;
+    --red-600: #cc2929;
+    --red-700: #b52a2a;
+    --red-800: #941f1f;
+    --red-900: #6b1515;
+}
+
+
+/* ============================================================================
+   COLORES NARANJAS - Orange Scale (50-900)
+============================================================================ */
+:root {
+    --orange-50: #fff9f5;
+    --orange-100: #fff1e7;
+    --orange-200: #fce6d5;
+    --orange-300: #f7d6bd;
+    --orange-400: #f0b58b;
+    --orange-500: #e86c13;
+    --orange-600: #d45a08;
+    --orange-700: #bd3e0c;
+    --orange-800: #9e3513;
+    --orange-900: #6b2711;
+}
+
+
+/* ============================================================================
+   COLORES AMARILLOS - Yellow Scale (50-900)
+============================================================================ */
+:root {
+    --yellow-50: #fffcef;
+    --yellow-100: #fff7d3;
+    --yellow-200: #f7e9a8;
+    --yellow-300: #f5e171;
+    --yellow-400: #f2d14b;
+    --yellow-500: #edba13;
+    --yellow-600: #d1930d;
+    --yellow-700: #ab6e05;
+    --yellow-800: #8c5600;
+    --yellow-900: #733f12;
+}
+
+
+/* ============================================================================
+   COLORES ÁMBAR - Amber Scale (50-900)
+============================================================================ */
+:root {
+    --amber-50: #fdfaed;
+    --amber-100: #fcf3cf;
+    --amber-200: #f7e28d;
+    --amber-300: #f5d261;
+    --amber-400: #f2be3a;
+    --amber-500: #e79913;
+    --amber-600: #db7706;
+    --amber-700: #b35309;
+    --amber-800: #91400d;
+    --amber-900: #763813;
+}
+
+
+/* ============================================================================
+   COLORES CYAN - Cyan Scale (50-900)
+============================================================================ */
+:root {
+    --cyan-50: #f5fbfc;
+    --cyan-100: #e0f8ff;
+    --cyan-200: #b3ecfc;
+    --cyan-300: #94e6ff;
+    --cyan-400: #6bd3f2;
+    --cyan-500: #34bae3;
+    --cyan-600: #32a4c7;
+    --cyan-700: #267a94;
+    --cyan-800: #125c73;
+    --cyan-900: #164759;
+}
+
+
+/* ============================================================================
+   COLORES TEAL - Teal Scale (50-900)
+============================================================================ */
+:root {
+    --teal-50: #f0fdfa;
+    --teal-100: #e6f7f4;
+    --teal-200: #bae8e1;
+    --teal-300: #97ded4;
+    --teal-400: #73d1c4;
+    --teal-500: #36baad;
+    --teal-600: #0b9e92;
+    --teal-700: #0f736b;
+    --teal-800: #115c57;
+    --teal-900: #114541;
+}
+
+
+/* ============================================================================
+   COLORES VIOLETA - Violet Scale (50-900)
+============================================================================ */
+:root {
+    --violet-50: #fbfaff;
+    --violet-100: #f5f2ff;
+    --violet-200: #e5e1fa;
+    --violet-300: #dad2f7;
+    --violet-400: #bdb1f0;
+    --violet-500: #6846e3;
+    --violet-600: #5f46c7;
+    --violet-700: #4f3da1;
+    --violet-800: #392980;
+    --violet-900: #251959;
+}
+
+
+/* ============================================================================
+   COLORES ROSA - Pink Scale (50-900)
+============================================================================ */
+:root {
+    --pink-50: #fff7fc;
+    --pink-100: #feeef8;
+    --pink-200: #f8e2f0;
+    --pink-300: #f2d4e6;
+    --pink-400: #e9c4da;
+    --pink-500: #e34aa6;
+    --pink-600: #cf3a96;
+    --pink-700: #9c2671;
+    --pink-800: #801458;
+    --pink-900: #570f3e;
+}
+
+
+/* ============================================================================
+   COLORES PÚRPURA - Purple Scale (50-900)
+============================================================================ */
+:root {
+    --purple-50: #fdfaff;
+    --purple-100: #f9f0ff;
+    --purple-200: #f1e5fa;
+    --purple-300: #e9d6f5;
+    --purple-400: #d6c1e6;
+    --purple-500: #9c45e3;
+    --purple-600: #8642c2;
+    --purple-700: #6e399d;
+    --purple-800: #5c2f83;
+    --purple-900: #401863;
+}
+
+
+/* ============================================================================
+   COLORES NEUTRALES - Black & White
+============================================================================ */
+:root {
+    --neutral-white: #ffffff;
+    --neutral-black: #000000;
+    --neutral: var(--neutral-white);
+    --invert-neutral: var(--neutral-black);
+}
+
+
+/* ============================================================================
+   OVERLAYS - Capas de transparencia blanca y negra
+============================================================================ */
+:root {
+    /* White overlays */
+    --white-overlay-50: rgba(255, 255, 255, 0.09);
+    --white-overlay-100: rgba(255, 255, 255, 0.18);
+    --white-overlay-200: rgba(255, 255, 255, 0.27);
+    --white-overlay-300: rgba(255, 255, 255, 0.36);
+    --white-overlay-400: rgba(255, 255, 255, 0.45);
+    --white-overlay-500: rgba(255, 255, 255, 0.54);
+    --white-overlay-600: rgba(255, 255, 255, 0.63);
+    --white-overlay-700: rgba(255, 255, 255, 0.72);
+    --white-overlay-800: rgba(255, 255, 255, 0.81);
+    --white-overlay-900: rgba(255, 255, 255, 0.9);
+    
+    /* Black overlays */
+    --black-overlay-50: rgba(0, 0, 0, 0.09);
+    --black-overlay-100: rgba(0, 0, 0, 0.18);
+    --black-overlay-200: rgba(0, 0, 0, 0.27);
+    --black-overlay-300: rgba(0, 0, 0, 0.36);
+    --black-overlay-400: rgba(0, 0, 0, 0.45);
+    --black-overlay-500: rgba(0, 0, 0, 0.54);
+    --black-overlay-600: rgba(0, 0, 0, 0.63);
+    --black-overlay-700: rgba(0, 0, 0, 0.72);
+    --black-overlay-800: rgba(0, 0, 0, 0.81);
+    --black-overlay-900: rgba(0, 0, 0, 0.9);
+}
+
+
+/* ============================================================================
+   COLORES SEMÁNTICOS DE FONDO - Background Colors
+============================================================================ */
+:root {
+    --bg-blue: var(--blue-100);
+    --bg-light-blue: var(--blue-50);
+    --bg-dark-blue: var(--blue-300);
+    --bg-green: var(--green-100);
+    --bg-yellow: var(--yellow-100);
+    --bg-orange: var(--orange-100);
+    --bg-red: var(--red-100);
+    --bg-gray: var(--gray-100);
+    --bg-grey: var(--gray-100);
+    --bg-light-gray: var(--gray-100);
+    --bg-dark-gray: var(--gray-400);
+    --bg-darkgrey: var(--gray-400);
+    --bg-purple: var(--purple-100);
+    --bg-pink: var(--pink-50);
+    --bg-cyan: var(--cyan-50);
+}
+
+
+/* ============================================================================
+   COLORES DE TEXTO EN FONDOS - Text on Background Colors
+============================================================================ */
+:root {
+    --text-on-blue: var(--blue-700);
+    --text-on-light-blue: var(--blue-600);
+    --text-on-dark-blue: var(--blue-800);
+    --text-on-green: var(--green-800);
+    --text-on-yellow: var(--yellow-700);
+    --text-on-orange: var(--orange-700);
+    --text-on-red: var(--red-700);
+    --text-on-gray: var(--gray-700);
+    --text-on-grey: var(--gray-700);
+    --text-on-darkgrey: var(--gray-800);
+    --text-on-dark-gray: var(--gray-800);
+    --text-on-light-gray: var(--gray-800);
+    --text-on-purple: var(--purple-700);
+    --text-on-pink: var(--pink-700);
+    --text-on-cyan: var(--cyan-700);
+}
+
+
+/* ============================================================================
+   COLORES DE ALERTAS - Alert Colors
+============================================================================ */
+:root {
+    /* Texto de alertas */
+    --alert-text-danger: var(--red-600);
+    --alert-text-warning: var(--yellow-700);
+    --alert-text-info: var(--blue-700);
+    --alert-text-success: var(--green-700);
+    
+    /* Fondos de alertas */
+    --alert-bg-danger: var(--red-50);
+    --alert-bg-warning: var(--yellow-50);
+    --alert-bg-info: var(--blue-50);
+    --alert-bg-success: var(--green-100);
+}
+
+
+/* ============================================================================
+   COLORES DE AVATARES - Avatar Colors
+============================================================================ */
+:root {
+    --avatar-frame-color: var(--gray-500);
+    --avatar-frame-bg: var(--gray-100);
+    --avatar-frame-border: var(--gray-50);
+    
+    --orange-avatar-bg: var(--orange-100);
+    --orange-avatar-color: var(--orange-600);
+    --pink-avatar-bg: var(--pink-50);
+    --pink-avatar-color: var(--pink-500);
+    --blue-avatar-bg: var(--blue-50);
+    --blue-avatar-color: var(--blue-500);
+    --green-avatar-bg: var(--green-200);
+    --green-avatar-color: var(--green-800);
+    --dark-green-avatar-bg: var(--green-200);
+    --dark-green-avatar-color: var(--green-800);
+    --red-avatar-bg: var(--red-50);
+    --red-avatar-color: var(--red-500);
+    --yellow-avatar-bg: var(--yellow-50);
+    --yellow-avatar-color: var(--yellow-500);
+    --purple-avatar-bg: var(--purple-50);
+    --purple-avatar-color: var(--purple-500);
+    --gray-avatar-bg: var(--gray-50);
+    --gray-avatar-color: var(--gray-50);
+}
+
+
+/* ============================================================================
+   COLORES DE APRECIACIÓN Y CRÍTICA - Feedback Colors
+============================================================================ */
+:root {
+    --appreciation-color: var(--green-600);
+    --appreciation-bg: var(--green-100);
+    --criticism-color: var(--red-600);
+    --criticism-bg: var(--red-100);
+    --error-bg: var(--red-50);
+    --error-border: var(--red-400);
+}
+
+
+/* ============================================================================
+   COLORES DE INTERFAZ - UI Colors
+============================================================================ */
+:root {
+    --bg-color: white;
+    --fg-color: white;
+    --subtle-accent: var(--gray-50);
+    --subtle-fg: var(--gray-100);
+    --navbar-bg: var(--neutral);
+    --fg-hover-color: var(--gray-100);
+    --card-bg: var(--fg-color);
+    
+    --disabled-text-color: var(--gray-600);
+    --disabled-control-bg: var(--gray-50);
+    
+    --control-bg: var(--gray-100);
+    --control-bg-on-gray: var(--gray-200);
+    
+    --awesomebar-focus-bg: var(--fg-color);
+    --modal-bg: white;
+    --toast-bg: var(--modal-bg);
+    --popover-bg: white;
+    --awesomplete-hover-bg: var(--control-bg);
+    
+    --btn-primary: var(--gray-900);
+    --btn-default-bg: var(--gray-100);
+    --btn-default-hover-bg: var(--gray-300);
+    
+    --border-primary: var(--gray-900);
+    --sidebar-select-color: var(--gray-100);
+    
+    --scrollbar-thumb-color: var(--gray-400);
+    --scrollbar-track-color: var(--gray-200);
+}
+
+
+/* ============================================================================
+   COLORES DE TEXTO - Text Colors
+============================================================================ */
+:root {
+    --heading-color: var(--gray-900);
+    --text-neutral: var(--gray-900);
+    --text-color: var(--gray-800);
+    --text-muted: var(--gray-700);
+    --text-light: var(--gray-600);
+    --text-dark: var(--fg-color);
+}
+
+
+/* ============================================================================
+   COLORES DE BORDES Y DIVISORES - Border & Divider Colors
+============================================================================ */
+:root {
+    --border-color: var(--gray-200);
+    --dark-border-color: var(--gray-300);
+    --table-border-color: var(--gray-200);
+    --divider-color: rgba(237, 237, 237, 1);
+    --btn-group-border-color: var(--gray-300);
+}
+
+
+/* ============================================================================
+   COLORES DE SIDEBAR - Sidebar Colors
+============================================================================ */
+:root {
+    --sidebar-hover-color: #f3f3f3;
+    --sidebar-active-color: rgba(255, 255, 255, 1);
+    --sidebar-border-color: #ededed;
+}
+
+
+/* ============================================================================
+   COLORES DE KANBAN - Kanban Board Colors
+============================================================================ */
+:root {
+    --kanban-column-bg: var(--gray-100);
+    --kanban-card-bg: var(--card-bg);
+    --kanban-card-hover-bg: var(--card-bg);
+    --kanban-new-card-bg: var(--gray-200);
+    --kanban-new-card-hover-bg: white;
+}
+
+
+/* ============================================================================
+   COLORES DE HIGHLIGHTS - Highlight Colors
+============================================================================ */
+:root {
+    --highlight-color: var(--gray-50);
+    --yellow-highlight-color: var(--yellow-50);
+    --placeholder-color: var(--gray-50);
+    --highlight-shadow: 1px 1px 10px var(--blue-50), 0px 0px 4px var(--blue-600);
+}
+
+
+/* ============================================================================
+   COLORES DE CÓDIGO - Code Block Colors
+============================================================================ */
+:root {
+    --code-block-bg: var(--gray-900);
+    --code-block-text: var(--gray-400);
+}
+
+
+/* ============================================================================
+   COLORES DE DIFF - Git Diff Colors
+============================================================================ */
+:root {
+    --diff-added: var(--green-100);
+    --diff-removed: var(--red-100);
+}
+
+
+/* ============================================================================
+   COLORES DE CHECKBOX - Checkbox Colors
+============================================================================ */
+:root {
+    --checkbox-color: var(--neutral-black);
+    --checkbox-focus-shadow: 0 0 0 2px var(--gray-300);
+    --checkbox-gradient: linear-gradient(180deg, var(--primary) -124.51%, var(--primary) 100%);
+    --checkbox-disabled-gradient: linear-gradient(180deg, var(--disabled-control-bg) -124.51%, var(--disabled-control-bg) 100%);
+    --switch-bg: var(--gray-300);
+}
+
+
+/* ============================================================================
+   COLORES DE FECHA - Date Picker Colors
+============================================================================ */
+:root {
+    --date-active-text: var(--gray-100);
+    --date-active-bg: var(--gray-900);
+    --date-range-bg: var(--subtle-fg);
+}
+
+
+/* ============================================================================
+   COLORES DE TIMELINE - Timeline Colors
+============================================================================ */
+:root {
+    --timeline-badge-color: var(--gray-900);
+    --timeline-badge-bg: var(--gray-100);
+}
+
+
+/* ============================================================================
+   COLORES DE MENCIONES - Mention Colors
+============================================================================ */
+:root {
+    --user-mention-bg-color: var(--fg-color);
+    --group-mention-bg-color: var(--bg-purple);
+}
+
+
+/* ============================================================================
+   OTROS COLORES - Other Colors
+============================================================================ */
+:root {
+    --skeleton-bg: var(--gray-100);
+    --progress-bar-bg: var(--primary);
+    --icon-fill: transparent;
+    --icon-fill-bg: var(--fg-color);
+    --icon-stroke: var(--gray-800);
+    --surface-modal: rgba(255, 255, 255, 1);
+    --input-disabled-bg: var(--gray-200);
+    --brand-color: var(--primary);
+    --primary-color: var(--gray-900);
+}
+
+
+/* ============================================================================
+   GRADIENTES Y EFECTOS - Gradients & Effects
+============================================================================ */
+:root {
+    --linear-black: linear-gradient(to bottom, rgba(46, 46, 46, 0.18) 0%, rgba(36, 36, 36, 0.14) 100%);
+    --linear-blue: linear-gradient(to bottom, rgba(17, 142, 245, 0.067) 0%, rgba(7, 127, 247, 0.029) 100%);
+    
+    --angular-white: conic-gradient(rgba(255, 255, 255, 1) 72.38%, rgba(255, 255, 255, 1) 99.87%);
+    --angular-black: conic-gradient(rgba(56, 56, 56, 0.22) 72.38%, rgba(56, 56, 56, 0.22) 99.87%);
+    --angular-green: conic-gradient(rgba(23, 117, 75, 0.092) 72.38%, rgba(23, 117, 75, 0.092) 99.87%);
+    --angular-red: conic-gradient(rgba(205, 41, 41, 0.804) 72.38%, rgba(205, 41, 41, 0.804) 99.87%);
+    --angular-blue: conic-gradient(rgba(0, 110, 219, 0) 72.38%, rgba(0, 110, 219, 0) 99.87%);
+    
+    --shadow-inset: inset 0px -1px 0px var(--gray-300);
+}
+
+
+/* ============================================================================
+   COLORES DE GRÁFICAS - Chart Colors
+============================================================================ */
+:root {
+    --charts-label-color: #313b44;
+    --charts-axis-line-color: #f4f5f6;
+    --charts-tooltip-title: var(--charts-label-color);
+    --charts-tooltip-label: var(--charts-label-color);
+    --charts-tooltip-value: #192734;
+    --charts-tooltip-bg: #ffffff;
+    --charts-stroke-width: 2px;
+    --charts-dataset-circle-stroke: #ffffff;
+    --charts-dataset-circle-stroke-width: var(--charts-stroke-width);
+    --charts-legend-label: var(--charts-label-color);
+    --charts-legend-value: var(--charts-label-color);
+}
