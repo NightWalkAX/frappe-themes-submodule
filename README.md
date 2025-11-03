@@ -1,17 +1,29 @@
-# Frappe Themes Submodule
+# Frappe Themes Submodule for Frappe UX Upgrade
 
-An independent sub-repository containing themes for both Website and Frappe Desk. Includes a complete theme management system with previews, auto-loader, and enhanced theme switcher.
+An independent sub-repository containing themes specifically designed for the **Frappe UX Upgrade** app. Includes a complete theme management system**Problem**: Sites without the app will get JavaScript errors when trying to access theme APIs
+# Error example: "Method not found: frappe_ux_upgrade.user_extension.get_available_themes"
+
+# Solutions:
+
+# Option 1: Install frappe_ux_upgrade on all sites
+# Option 1: Install frappe_ux_upgrade on all sites
+bench --site site1 install-app frappe_ux_upgrade
+bench --site site2 install-app frappe_ux_upgrade
+
+# Option 2: Use conditional theme switcher (see Advanced Customization)
+
+# Option 3: Ensure frappe_ux_upgrade is available on all sites in multi-tenant setup, auto-loader, and enhanced theme switcher.
 
 ## 🚀 Features
 
-- ✨ **Website Themes**: Custom Bootstrap themes with unique styling
+- ✨ **Website Themes**: Custom Bootstrap themes with unique styling for Frappe UX Upgrade
 - 🎨 **Desk Themes**: "Dark Purple Desk" and "Ocean Blue Desk" for desktop interface
-- 🔧 **Automatic Installation**: Installation script that sets up the entire theme system
+- 🔧 **Automatic Installation**: Installation script that sets up the entire theme system in frappe_ux_upgrade
 - 🎯 **Enhanced Theme Switcher**: Instant switching with visual previews (Ctrl+Shift+G)
 - 🤖 **Auto-Loader**: Automatic theme persistence between sessions
 - 📊 **Theme Preview API**: Automatic extraction of colors and CSS variables
-- 📦 **Zero Dependencies**: No additional installations required
-- 🛠️ **Plug & Play**: Works from any frappe-bench directory
+- 📦 **Zero Dependencies**: No additional installations required beyond frappe_ux_upgrade
+- 🛠️ **Plug & Play**: Designed specifically for frappe_ux_upgrade app
 - 📱 **Responsive**: Adaptive and modern designs
 
 ## 📁 Repository Structure
@@ -45,24 +57,34 @@ frappe-themes-submodule/
 
 ## 🛠️ Installation
 
+### Prerequisites
+
+⚠️ **Important**: This theme submodule is designed exclusively for the `frappe_ux_upgrade` app. Make sure you have this app installed before proceeding.
+
+```bash
+# First, ensure frappe_ux_upgrade is installed
+bench get-app https://github.com/your-repo/frappe_ux_upgrade
+bench --site your-site install-app frappe_ux_upgrade
+```
+
 ### Option 1: As Git Submodule (Recommended)
 
 ```bash
-# 1. Add as submodule to your project
+# 1. Add as submodule to your frappe-bench
 cd /path/to/frappe-bench
 git submodule add [URL_OF_THIS_REPO] frappe-themes-submodule
 
-# 2. Install complete theme system
-./frappe-themes-submodule/install.sh my_app
+# 2. Install theme system in frappe_ux_upgrade
+./frappe-themes-submodule/install.sh frappe_ux_upgrade
 
 # 3. Migrate to apply changes
-bench --site my-site migrate
+bench --site your-site migrate
 
 # 4. Build Frappe assets
 bench build --app frappe
 
 # 5. Clear cache to apply theme switcher
-bench --site my-site clear-cache
+bench --site your-site clear-cache
 
 # 6. Use Ctrl+Shift+G to switch themes instantly!
 ```
@@ -72,13 +94,13 @@ bench --site my-site clear-cache
 ```bash
 # 1. Download or clone to frappe-bench
 cd /path/to/frappe-bench
-git clone [URL_OF_THIS_REPO] themes-submodule
+git clone [URL_OF_THIS_REPO] frappe-themes-submodule
 
-# 2. Run installation
-./themes-submodule/install.sh my_app
+# 2. Run installation for frappe_ux_upgrade
+./frappe-themes-submodule/install.sh frappe_ux_upgrade
 
 # 3. Migrate
-bench --site my-site migrate
+bench --site your-site migrate
 ```
 
 ### Option 3: Manual Download
@@ -89,19 +111,18 @@ cd /path/to/frappe-bench
 wget [ZIP_URL]
 unzip frappe-themes-submodule.zip
 
-# 2. Install
-./frappe-themes-submodule/install.sh my_app
+# 2. Install in frappe_ux_upgrade
+./frappe-themes-submodule/install.sh frappe_ux_upgrade
 ```
 
 ## 🔧 Installation Script Usage
 
 ```bash
-# Basic syntax
-./install.sh [your_app_name]
-
-# Practical example
-./install.sh dragon_ball_app
+# Install themes in frappe_ux_upgrade app
+./install.sh frappe_ux_upgrade
 ```
+
+⚠️ **Note**: This installation script is specifically configured for the `frappe_ux_upgrade` app and will automatically read the module name from `apps/frappe_ux_upgrade/frappe_ux_upgrade/modules.txt` (which should be "Frappe UX Upgrade").
 
 ### What does the script install?
 
@@ -119,11 +140,11 @@ unzip frappe-themes-submodule.zip
 ## 📋 Requirements
 
 - ✅ Frappe Framework v13+ 
-- ✅ Valid Frappe application as target
+- ✅ **frappe_ux_upgrade app** installed and configured
 - ✅ Write permissions in the `apps/` directory
 - ✅ Bash shell (Linux/macOS/WSL)
 
-⚠️ **Multi-Tenancy Warning**: In multi-tenant setups, ensure the target app is installed on all sites that will use the enhanced theme switcher, or users may encounter JavaScript errors when pressing Ctrl+Shift+G.
+⚠️ **Multi-Tenancy Warning**: In multi-tenant setups, ensure the `frappe_ux_upgrade` app is installed on all sites that will use the enhanced theme switcher, or users may encounter JavaScript errors when pressing Ctrl+Shift+G.
 
 ## 🎨 Included Themes
 
@@ -172,11 +193,11 @@ unzip frappe-themes-submodule.zip
 ```bash
 # Update to latest version
 cd /path/to/frappe-bench
-git submodule update --remote themes-submodule
+git submodule update --remote frappe-themes-submodule
 
-# Reinstall if there are theme changes
-./themes-submodule/install.sh my_app
-bench --site my-site migrate
+# Reinstall themes in frappe_ux_upgrade
+./frappe-themes-submodule/install.sh frappe_ux_upgrade
+bench --site your-site migrate
 ```
 
 ## 🐛 Troubleshooting
@@ -203,9 +224,9 @@ bench new-app base_themes
 ```
 
 **Recommended Multi-Tenant Setup**:
-1. Create a dedicated theme app that's installed on all sites
-2. Or modify the theme switcher to gracefully handle missing APIs
-3. Always test theme switching on sites without the app installed
+1. Install `frappe_ux_upgrade` on all sites that need theme functionality
+2. Modify the theme switcher to gracefully handle missing APIs (if needed)
+3. Always test theme switching on sites with and without frappe_ux_upgrade installed
 
 ### Theme Switcher not appearing (Ctrl+Shift+G)
 
@@ -227,23 +248,23 @@ ls -la sites/assets/frappe/js/frappe/desk.js*
 
 ```bash
 # 1. Verify user_extension.py exists
-ls apps/my_app/my_app/user_extension.py
+ls apps/frappe_ux_upgrade/frappe_ux_upgrade/user_extension.py
 
 # 2. Verify import in __init__.py
-grep "user_extension" apps/my_app/my_app/__init__.py
+grep "user_extension" apps/frappe_ux_upgrade/frappe_ux_upgrade/__init__.py
 
 # 3. Test API from browser console
-frappe.xcall('my_app.user_extension.get_available_themes')
+frappe.xcall('frappe_ux_upgrade.user_extension.get_available_themes')
 ```
 
 ### Themes don't apply or persist
 
 ```bash
 # 1. Verify Theme Preview API
-frappe.xcall('my_app.theme_preview_api.validate_theme_preview_api')
+frappe.xcall('frappe_ux_upgrade.theme_preview_api.validate_theme_preview_api')
 
 # 2. Verify user preferences
-frappe.xcall('my_app.user_extension.get_desk_theme_preference')
+frappe.xcall('frappe_ux_upgrade.user_extension.get_desk_theme_preference')
 
 # 3. Clear browser localStorage
 # Open DevTools > Application > Local Storage > Clear
@@ -266,13 +287,13 @@ bench --site my-site clear-cache
 
 ```bash
 # Verify permissions
-ls -la apps/my_app/my_app/
+ls -la apps/frappe_ux_upgrade/frappe_ux_upgrade/
 
-# Verify app exists
-bench --site my-site list-apps
+# Verify frappe_ux_upgrade app exists
+bench --site your-site list-apps
 
 # Reinstall from scratch if necessary
-./install.sh my_app
+./install.sh frappe_ux_upgrade
 ```
 
 ### Restore original Frappe files
@@ -322,23 +343,23 @@ bench build --app frappe
 ### Theme Preview API
 ```javascript
 // Get all themes with preview data
-frappe.xcall('your_app.theme_preview_api.get_theme_preview_data')
+frappe.xcall('frappe_ux_upgrade.theme_preview_api.get_theme_preview_data')
   .then(response => console.log(response.themes));
 
 // Validate that API works
-frappe.xcall('your_app.theme_preview_api.validate_theme_preview_api')
+frappe.xcall('frappe_ux_upgrade.theme_preview_api.validate_theme_preview_api')
   .then(result => console.log(result));
 ```
 
 ### Preference Management
 ```javascript
 // Save preferred theme
-frappe.xcall('your_app.user_extension.save_desk_theme_preference', {
+frappe.xcall('frappe_ux_upgrade.user_extension.save_desk_theme_preference', {
   theme_name: 'dark_purple_desk'
 });
 
 // Get preferred theme
-frappe.xcall('your_app.user_extension.get_desk_theme_preference')
+frappe.xcall('frappe_ux_upgrade.user_extension.get_desk_theme_preference')
   .then(result => console.log(result.theme));
 ```
 
@@ -353,7 +374,7 @@ For multi-tenant environments, you can modify the theme switcher to gracefully h
 frappe.ui.ThemeSwitcher = class ThemeSwitcher extends frappe.ui.Dialog {
     setup() {
         // Check if theme extension APIs are available
-        this.has_theme_extension = frappe.boot.installed_apps?.includes('your_app_name');
+        this.has_theme_extension = frappe.boot.installed_apps?.includes('frappe_ux_upgrade');
         
         if (!this.has_theme_extension) {
             // Fallback to basic theme switching
@@ -375,7 +396,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher extends frappe.ui.Dialog {
     
     setup_enhanced_themes() {
         // Use full theme system with API calls
-        frappe.xcall('your_app.user_extension.get_available_themes')
+        frappe.xcall('frappe_ux_upgrade.user_extension.get_available_themes')
             .then(response => {
                 this.themes = response.themes;
                 this.refresh();
@@ -393,13 +414,13 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher extends frappe.ui.Dialog {
 
 ```bash
 # 1. Edit the theme's JSON file
-nano apps/my_app/my_app/website_theme/custom_theme/custom_theme.json
+nano apps/frappe_ux_upgrade/frappe_ux_upgrade/website_theme/custom_theme/custom_theme.json
 
 # 2. Customize the SCSS
 # Edit the "theme_scss" field in the JSON
 
 # 3. Build assets
-bench build --app my_app
+bench build --app frappe_ux_upgrade
 ```
 
 ### Add a new theme
@@ -414,7 +435,7 @@ cat > themes/my_new_theme/my_new_theme.json << EOF
   "doctype": "Website Theme",
   "name": "My New Theme",
   "theme": "My New Theme", 
-  "module": "Your App",
+  "module": "Frappe UX Upgrade",
   "theme_scss": "// Your CSS here"
 }
 EOF
@@ -426,7 +447,7 @@ touch themes/my_new_theme/__init__.py
 # Edit fixtures/website_theme.json to include the new theme
 
 # 5. Reinstall
-./install.sh my_app
+./install.sh frappe_ux_upgrade
 ```
 
 ## 📝 Integration Example
@@ -445,14 +466,14 @@ fixtures = [
 ]
 ```
 
-### Resulting structure in your app:
+### Resulting structure in frappe_ux_upgrade:
 
 ```
-apps/my_app/
-├── my_app/
+apps/frappe_ux_upgrade/
+├── frappe_ux_upgrade/
 │   ├── website_theme/              # ← All themes installed here
-│   │   ├── custom_theme_1/         # Website theme
-│   │   ├── custom_theme_2/         # Website theme  
+│   │   ├── dickface/               # Website theme
+│   │   ├── dickhead/               # Website theme  
 │   │   ├── dark_purple_desk/       # Desk theme 🆕
 │   │   └── ocean_blue_desk/        # Desk theme 🆕
 │   ├── fixtures/                   # ← Fixtures with automatic configuration
@@ -497,9 +518,9 @@ sites/assets/frappe/js/frappe/
 git submodule update --remote frappe-themes-submodule
 
 # Reinstall with new features
-./frappe-themes-submodule/install.sh my_app
+./frappe-themes-submodule/install.sh frappe_ux_upgrade
 bench build --app frappe
-bench --site my-site clear-cache
+bench --site your-site clear-cache
 ```
 
 ### Add new custom desk themes
@@ -518,7 +539,7 @@ cat > themes/my_desk_theme/my_desk_theme.json << 'EOF'
 EOF
 
 # 3. Reinstall
-./install.sh my_app
+./install.sh frappe_ux_upgrade
 ```
 
 ## ⚡ Technical Features
@@ -532,7 +553,7 @@ EOF
 ### Auto-Loader System
 - **Automatic loading**: Restores preferred theme on login
 - **Smart fallback**: Robust error recovery system
-- **Multi-app support**: Works with any Frappe app
+- **Frappe UX Upgrade integration**: Designed specifically for frappe_ux_upgrade app
 - **Cache management**: Performance and memory optimization
 
 ### Theme Preview API
@@ -557,4 +578,6 @@ MIT License - Use it freely in your projects.
 - Use `Ctrl+Shift+G` to switch themes quickly
 - Themes are automatically saved per user
 - Original file backups are created automatically
+- This submodule is exclusively designed for `frappe_ux_upgrade` app
 - Keep this repository as a submodule to receive updates
+- Always ensure `frappe_ux_upgrade` is installed before using theme functionality
