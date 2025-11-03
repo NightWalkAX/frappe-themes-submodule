@@ -707,7 +707,7 @@ frappe.Application = class Application {
 					});
 				} else {
 					// Fallback: probar apps conocidas
-					const known_apps = ['doctyped_cheatsheets', 'erpnext', 'hrms', 'lms', 'wiki'];
+					const known_apps = ['frappe_ux_upgrade'];
 					known_apps.forEach(app => {
 						potential_methods.push(`${app}.user_extension.get_available_themes`);
 					});

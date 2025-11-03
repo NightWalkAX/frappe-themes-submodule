@@ -375,7 +375,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 			});
 		} else {
 			// Fallback: probar apps conocidas
-			const known_apps = ['doctyped_cheatsheets', 'erpnext', 'hrms', 'lms', 'wiki'];
+			const known_apps = ['frappe_ux_upgrade'];
 			known_apps.forEach(app => {
 				desk_methods.push(`${app}.user_extension.get_available_themes`);
 			});
@@ -566,7 +566,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 		const potential_methods = [];
 		
 		// Métodos conocidos que podríamos probar directamente
-		const known_apps = ['doctyped_cheatsheets', 'erpnext', 'hrms', 'lms', 'wiki'];
+		const known_apps = ['frappe_ux_upgrade'];
 		
 		// Primero intentar desde frappe.boot.installed_apps si está disponible
 		if (frappe.boot?.installed_apps && Array.isArray(frappe.boot.installed_apps)) {
@@ -1283,7 +1283,7 @@ frappe.ui.ThemeSwitcher = class ThemeSwitcher {
 			});
 		} else {
 			// Fallback: probar apps conocidas
-			const known_apps = ['doctyped_cheatsheets', 'erpnext', 'hrms', 'lms', 'wiki'];
+			const known_apps = ['frappe_ux_upgrade'];
 			known_apps.forEach(app => {
 				app_methods.push(`${app}.user_extension.save_desk_theme_preference`);
 			});
