@@ -12,9 +12,9 @@
  "modified": "2025-10-03 09:54:19.447663",
  "modified_by": "Administrator",
  "module": "Website",
- "name": "Dickhead",
+ "name": "Clean Bootstrap",
  "owner": "Administrator",
- "theme": "Dickhead",
+ "theme": "Clean Bootstrap",
  "theme_scss": "$enable-shadows: false;\n$enable-gradients: false;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n\n\n\n// Custom Theme\n\n\n:root {\n\t}\n",
- "theme_url": "/files/website_theme/dickhead_style.css"
+ "theme_url": "/files/website_theme/clean_bootstrap_style.css"
 }

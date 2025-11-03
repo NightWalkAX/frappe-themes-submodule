@@ -31,11 +31,11 @@ bench --site site2 install-app frappe_ux_upgrade
 ```
 frappe-themes-submodule/
 ├── themes/                              # Available themes
-│   ├── dickface/                        # Website theme
-│   │   ├── dickface.json               
+│   ├── clean_bootstrap/                 # Website theme
+│   │   ├── clean_bootstrap.json               
 │   │   └── __init__.py
-│   ├── dickhead/                        # Website theme
-│   │   ├── dickhead.json               
+│   ├── minimal_rounded/                 # Website theme
+│   │   ├── minimal_rounded.json               
 │   │   └── __init__.py
 │   ├── dark_purple_desk/                # Desk theme
 │   │   ├── dark_purple_desk.json       
@@ -472,8 +472,8 @@ fixtures = [
 apps/frappe_ux_upgrade/
 ├── frappe_ux_upgrade/
 │   ├── website_theme/              # ← All themes installed here
-│   │   ├── dickface/               # Website theme
-│   │   ├── dickhead/               # Website theme  
+│   │   ├── clean_bootstrap/        # Website theme
+│   │   ├── minimal_rounded/        # Website theme  
 │   │   ├── dark_purple_desk/       # Desk theme 🆕
 │   │   └── ocean_blue_desk/        # Desk theme 🆕
 │   ├── fixtures/                   # ← Fixtures with automatic configuration
