@@ -123,6 +123,8 @@ unzip frappe-themes-submodule.zip
 - ✅ Write permissions in the `apps/` directory
 - ✅ Bash shell (Linux/macOS/WSL)
 
+⚠️ **Multi-Tenancy Warning**: In multi-tenant setups, ensure the target app is installed on all sites that will use the enhanced theme switcher, or users may encounter JavaScript errors when pressing Ctrl+Shift+G.
+
 ## 🎨 Included Themes
 
 ### Website Themes
@@ -178,6 +180,32 @@ bench --site my-site migrate
 ```
 
 ## 🐛 Troubleshooting
+
+### Multi-Tenancy Mode Considerations ⚠️
+
+**Important**: In multi-tenancy setups, the enhanced theme switcher (Ctrl+Shift+G) may cause errors on sites that don't have the theme submodule app installed.
+
+```bash
+# Problem: Sites without the app will get JavaScript errors when trying to access theme APIs
+# Error example: "Method not found: my_app.user_extension.get_available_themes"
+
+# Solutions:
+
+# Option 1: Install the app on all sites
+bench --site site1 install-app my_app
+bench --site site2 install-app my_app
+
+# Option 2: Use conditional theme switcher (see Advanced Customization)
+
+# Option 3: Create a base theme app that all sites share
+bench new-app base_themes
+# Then install base_themes on all sites instead
+```
+
+**Recommended Multi-Tenant Setup**:
+1. Create a dedicated theme app that's installed on all sites
+2. Or modify the theme switcher to gracefully handle missing APIs
+3. Always test theme switching on sites without the app installed
 
 ### Theme Switcher not appearing (Ctrl+Shift+G)
 
@@ -315,6 +343,51 @@ frappe.xcall('your_app.user_extension.get_desk_theme_preference')
 ```
 
 ## 🔧 Advanced Customization
+
+### Multi-Tenant Safe Theme Switcher
+
+For multi-tenant environments, you can modify the theme switcher to gracefully handle sites without the theme app:
+
+```javascript
+// Add to your custom theme_switcher.js
+frappe.ui.ThemeSwitcher = class ThemeSwitcher extends frappe.ui.Dialog {
+    setup() {
+        // Check if theme extension APIs are available
+        this.has_theme_extension = frappe.boot.installed_apps?.includes('your_app_name');
+        
+        if (!this.has_theme_extension) {
+            // Fallback to basic theme switching
+            this.setup_basic_themes();
+        } else {
+            // Use enhanced theme system
+            this.setup_enhanced_themes();
+        }
+    }
+    
+    setup_basic_themes() {
+        // Only show built-in Frappe themes
+        this.themes = [
+            { name: 'Frappe Light', key: 'light' },
+            { name: 'Timeless Night', key: 'dark' },
+            { name: 'Automatic', key: 'automatic' }
+        ];
+    }
+    
+    setup_enhanced_themes() {
+        // Use full theme system with API calls
+        frappe.xcall('your_app.user_extension.get_available_themes')
+            .then(response => {
+                this.themes = response.themes;
+                this.refresh();
+            })
+            .catch(() => {
+                // Fallback if API fails
+                this.setup_basic_themes();
+                this.refresh();
+            });
+    }
+};
+```
 
 ### Modify an existing theme
 
