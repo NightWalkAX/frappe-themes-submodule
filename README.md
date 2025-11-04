@@ -6,7 +6,6 @@ An independent sub-repository containing themes specifically designed for the **
 # Solutions:
 
 # Option 1: Install frappe_ux_upgrade on all sites
-# Option 1: Install frappe_ux_upgrade on all sites
 bench --site site1 install-app frappe_ux_upgrade
 bench --site site2 install-app frappe_ux_upgrade
 
@@ -63,7 +62,7 @@ frappe-themes-submodule/
 
 ```bash
 # First, ensure frappe_ux_upgrade is installed
-bench get-app https://github.com/your-repo/frappe_ux_upgrade
+bench get-app https://github.com/NightWalkAX/frappe_ux_upgrade
 bench --site your-site install-app frappe_ux_upgrade
 ```
 
